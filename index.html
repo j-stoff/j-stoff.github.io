@@ -2,21 +2,35 @@
 <html>
 <head>
     <title>Projects Page</title>
+    <link rel="stylesheet" type="text/css" href="style/master.css">
 </head>
 <body>
-    <h2>A place for organization</h2>
-    <p>I mainly use this space to organize projects, list skills I've acquired, and keep track of my interests within programming.</p>
-
-    <h3><a href="skills.html">My growing list of skills</a></h3>
-
-    <h3><a href="todo.html">Cool stuff to learn</a></h3>
-
-    <!-- likely to be glued to the side like a panel -->
-    <h3>Projects</h3>
-        <ul>
-            <li><a href="https://github.com/j-stoff/charge">Charge! Game</a></li>
-            <li><a href="https://github.com/j-stoff/my_next_book">Your Next book</a></li>
-            <li><a href="https://github.com/j-stoff/PythonWeb">Python web development</a></li>
-        </ul>
+    <div class="grid-container">
+        <div class="navbar">
+            <ul class="navbar-list">
+                <li><a class="active" href="#index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="todo.html">TODO</a></li>
+            </ul>
+        </div>
+        
+        <div class="header">
+            <h2>A place for organization</h2>
+        </div>
+        
+        <div class="content">
+            <p>I mainly use this space to organize projects, list skills I've acquired, and keep track of my interests within programming.</p>
+            <p>This is a relatively static web page in that it only uses HTML, CSS, and a little Javascript.</p>
+            <p>The major purpose of this site is to keep an ordered collection of my works, my accomplishments, and my ever growing areas of interest - see the TODO page.</p>
+        </div>
+        <div class="projects">
+            <h3>Projects</h3>
+                <ul>
+                    <li><a href="https://github.com/j-stoff/charge">Charge! Game</a></li>
+                    <li><a href="https://github.com/j-stoff/my_next_book">Your Next book</a></li>
+                    <li><a href="https://github.com/j-stoff/PythonWeb">Python web development</a></li>
+                </ul>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+}
+
+.projects {
+    grid-area: projects;
+    background-color: red;
+}
+
+.projects h3 {
+    text-align: center;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+.content {
+    grid-area: content;
+    text-align: left;
+    padding: 15px;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+}
+
+.navbar {
+    grid-area: nav;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'projects nav nav nav nav nav'
+        'projects header header header right right'
+        'projects content content content right right';
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+.navbar li:last-child {
+    border-right: none;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.navbar .active {
+    background-color: #4CAF50;
+}
