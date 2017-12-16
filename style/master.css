@@ -2,13 +2,31 @@ body {
     margin: 0;
 }
 
+.empty-right {
+    grid-area: right;
+}
+
 .projects {
     grid-area: projects;
     background-color: red;
+    padding: 10%;
 }
 
 .projects h3 {
     text-align: center;
+}
+
+.projects li {
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+.projects li:hover {
+    background-color: yellow;
+}
+
+.projects ul {
+    padding: 0;
 }
 
 
@@ -35,8 +53,8 @@ ul {
     display: grid;
     grid-template-areas:
         'projects nav nav nav nav nav'
-        'projects header header header right right'
-        'projects content content content right right';
+        'projects header header header header right'
+        'projects content content content content right';
 }
 
 .navbar ul {
@@ -70,4 +88,8 @@ ul {
 
 .navbar .active {
     background-color: #4CAF50;
+}
+
+a {
+    text-decoration: none;
 }
