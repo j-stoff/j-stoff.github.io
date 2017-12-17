@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: sans-serif;
 }
 
 .empty-right {
@@ -9,7 +10,7 @@ body {
 .projects {
     grid-area: projects;
     background-color: red;
-    padding: 10%;
+    padding: 30px;
 }
 
 .projects h3 {
@@ -17,8 +18,8 @@ body {
 }
 
 .projects li {
-    padding-bottom: 10%;
-    padding-top: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .projects li:hover {
@@ -51,10 +52,13 @@ ul {
 
 .grid-container {
     display: grid;
+    
     grid-template-areas:
         'projects nav nav nav nav nav'
         'projects header header header header right'
         'projects content content content content right';
+    
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
 }
 
 .navbar ul {
@@ -92,4 +96,20 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+.subject-title {
+    font-size: 200%;
+    text-decoration: underline;
+}
+
+.subject-header {
+    font-size: 125%;
+    margin-left: 10px;
+}
+
+.subject-topic {
+    font-size: 120%;
+    margin-left: 25px;
+    font-family: fantasy;
 }
