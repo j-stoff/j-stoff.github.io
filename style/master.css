@@ -4,6 +4,7 @@ html, body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    display: block;
 }
 
 body {
@@ -59,17 +60,29 @@ ul {
     height: 47px;
 }
 
+.content-container {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        'header header header header right'
+        'content content content content right';
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    height: 100%;
+}
+
 .grid-container {
     display: grid;
     
     grid-template-areas:
         'projects nav nav nav nav nav'
-        'projects header header header header right'
-        'projects content content content content right';
+        'projects main main main main main'
+        'projects main main main main main';
     
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     height: 100%;
 }
+
+
 
 .navbar ul {
     list-style-type: none;
@@ -126,4 +139,8 @@ a {
 
 .header .title {
     font-size: 200%;
+}
+
+.resource-list li {
+    margin: 15px;
 }
