@@ -12,6 +12,12 @@ body {
     font-family: sans-serif;
 }
 
+.footer {
+    grid-area: footer;
+    height: 120px;
+    min-height: 75px;
+}
+
 .empty-right {
     grid-area: right;
 }
@@ -76,7 +82,8 @@ ul {
     grid-template-areas:
         'projects nav nav nav nav nav'
         'projects main main main main main'
-        'projects main main main main main';
+        'projects main main main main main'
+        'projects footer footer footer footer footer';
     
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     height: 100%;
@@ -143,4 +150,9 @@ a {
 
 .resource-list li {
     margin: 15px;
+}
+
+.emphasize {
+    font-size: 120%;
+    font-style: bold;
 }
