@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson 3</title>
+    <link rel="stylesheet" type="text/css" href="style/master.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="navbar">
+            <ul class="navbar-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="todo.html">TODO</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a class="active" href="lessons.html">Lessons</a></li>
+            </ul>
+        </div>
+
+        <div class="projects">
+            <h3>Projects</h3>
+                <ul>
+                    <li><a href="https://github.com/j-stoff/charge">Charge! Game</a></li>
+                    <li><a href="https://github.com/j-stoff/my_next_book">Your Next book</a></li>
+                    <li><a href="https://github.com/j-stoff/PythonWeb">Python web development</a></li>
+                </ul>
+        </div>
+
+        <div class="content-container">
+            <div class="header">
+                <h2>Lesson 3</h2>
+            </div>
+            <div class="content">
+                <h3>More than just variables</h3>
+                <p>Obviously programming is much more than just declaring variables and assigning them to values.</p>
+
+                <p>That is where decisions are made in the program, using <span class="emphasize">if</span> statments or even <span class="emphasize">switch</span> statements.</p>
+
+                <p>Additionally, there is looping to do repeatious tasks using <span class="emphasize">for</span> and <span class="emphasize">while</span></p>
+
+                <h3>The big IF</h3>
+                <p>An if statement has a fairly simple structure.</p>
+                <p>if (statement to evaluate) {//code to run goes in here}</p>
+                <p>Within the parenthesis, anything that evaluates to a true or false statement can be put there. Even assignment returns a true or false!</p>
+
+                <p>Additionally, an <span class="emphasize">else</span> can be added after the if statement to execute when the if statement is false.</p>
+
+                <p>The chaining of if statements is also possible with <span class="emphasize">else if</span> statements.</p>
+
+                <p>Code example</p>
+                <p>if (true statement) {</p>
+                <p>// if true stuff</p>
+                <p>} else if (different statement) {</p>
+                <p>// else if true stuff</p>
+                <p>} else {</p>
+                <p>// Else</p>
+                <p>}</p>
+
+
+                <h3>For is For and when to while</h3>
+                <p>Put simply, for and while loops accomplish the exact same task but have different use cases in my opinion.</p>
+                <p>Typically, I use <span class="emphasize">for</span> loops when the number of loops is predetermined. For example, looping through an array or list, there is usually a field to indicate the size of such a data structure. Meaning that the maximum number of loops should be equal to 1 less than that size.</p>
+
+                <p>While is used when the number of loops isn't known, until some condition being evaluated in the while turns false.</p>
+                <p>Additionally, while loops have the added step of declaring variables outside of the loop or they will be reinitialized each time.</p>
+
+                <h3>While Loops</h3>
+                <p>The structure of the while loop is similar to the if statement except that it loops around.</p>
+                <p>while (condition to evaluate) {//Code to run}</p>
+                <p>As mentioned above, if variables are used to evaluate the loop condition they must be declared outside of the loop or they will be re-initialized each loop.</p>
+
+                <h3>For Loops</h3>
+                <p>For loop structure is more complicated. For loops can initialize values within the parenthesis. Semi-colons serve as seperators for the different declarations.</p>
+                <p>for (initialization value; evaluation statement; increment or change varaibles)</p>
+                <p>Example: for(int i = 0; i < 100; i += 1) declares a variable i (horrible name by the way) which loops until it reachs 100 or greater, incrementing by 1 each loop</p>
+
+                <h3>Switch statement</h3>
+                <p>Certainly more powerful than simple if statements and is meant to replace long if/else if chains that become unmanagable.</p>
+                <p>Overall structure is quite different from others</p>
+                <p>switch (thing being evaluated, does not need to be true/false) {</p>
+                <p>case (expected value here): // code for this case</p>
+                <p>case (parenthesis are for emphasis, not needed): // code for case</p>
+                <p>default: // The default case.</p>
+                <p>}</p>
+                <p>Note be sure to break after each case, or all cases will be evaluated.</p>
+
+
+                <h3>Caution with loops and switch statements</h3>
+                <p>Both looping and switch statements can lead to infinite loops if the conditions never change.</p>
+                <p>A <span class="emphasize">break</span> statement will get out of the current loop or switch case statement.</p>
+                <p>Loops also have a <span class="emphasize">continue</span> statement which will skip the rest of the code in the loop and start again at the top of the loop.</p>
+
+                <h3>Assignment - FizzBuzz</h3>
+                <p>The assignment is to print statements at certain intervals. Loop 100 times and print the number of the loop at each interval. Also if the interval is divisble by 3 print "Fizz". If the interval number is divisible by 5 print "Buzz". If divisible by both 3 and 5 print "FizzBuzz"</p>
+                <p>As a hint for this assignment, use the % operator which returns the remainder of a product.</p>
+
+            </div>
+            <div class="empty-right"></div>
+        </div>
+
+        <div class="footer"></div>
+        
+    </div>
+
+</body>
+</html>
