@@ -39,7 +39,10 @@
 
                 <h3>The big IF</h3>
                 <p>An if statement has a fairly simple structure.</p>
-                <p>if (statement to evaluate) {//code to run goes in here}</p>
+                <pre><code>
+                if (statement to evaluate) { 
+                    //code to run goes in here
+                }</code></pre>
                 <p>Within the parenthesis, anything that evaluates to a true or false statement can be put there. Even assignment returns a true or false!</p>
 
                 <p>Additionally, an <span class="emphasize">else</span> can be added after the if statement to execute when the if statement is false.</p>
@@ -47,13 +50,15 @@
                 <p>The chaining of if statements is also possible with <span class="emphasize">else if</span> statements.</p>
 
                 <p>Code example</p>
-                <p>if (true statement) {</p>
-                <p>// if true stuff</p>
-                <p>} else if (different statement) {</p>
-                <p>// else if true stuff</p>
-                <p>} else {</p>
-                <p>// Else</p>
-                <p>}</p>
+                <pre><code>
+                if (true statement) {
+                    // if true stuff
+                } else if (different statement) {
+                    // else if true stuff
+                } else {
+                    // Else
+                }
+                </code></pre>
 
 
                 <h3>For is For and when to while</h3>
@@ -65,22 +70,38 @@
 
                 <h3>While Loops</h3>
                 <p>The structure of the while loop is similar to the if statement except that it loops around.</p>
-                <p>while (condition to evaluate) {//Code to run}</p>
+                <pre><code>
+                    while (condition to evaluate) {
+                        //Code to run
+                    }
+                </code></pre>
                 <p>As mentioned above, if variables are used to evaluate the loop condition they must be declared outside of the loop or they will be re-initialized each loop.</p>
 
                 <h3>For Loops</h3>
                 <p>For loop structure is more complicated. For loops can initialize values within the parenthesis. Semi-colons serve as seperators for the different declarations.</p>
-                <p>for (initialization value; evaluation statement; increment or change varaibles)</p>
+                <pre><code>
+                    for (initialization value; evaluation statement; increment/change variables) {
+                        // Code to loop
+                    }
+                </code></pre>
                 <p>Example: for(int i = 0; i < 100; i += 1) declares a variable i (horrible name by the way) which loops until it reachs 100 or greater, incrementing by 1 each loop</p>
 
                 <h3>Switch statement</h3>
                 <p>Certainly more powerful than simple if statements and is meant to replace long if/else if chains that become unmanagable.</p>
                 <p>Overall structure is quite different from others</p>
-                <p>switch (thing being evaluated, does not need to be true/false) {</p>
-                <p>case (expected value here): // code for this case</p>
-                <p>case (parenthesis are for emphasis, not needed): // code for case</p>
-                <p>default: // The default case.</p>
-                <p>}</p>
+                <pre><code>
+                    switch (condition) {
+                        case (expected value without parenthesis):
+                            // Code to run
+                            break;
+                        case (Another expected value):
+                            // Code
+                            break;
+                        default:
+                            // Usually want to have a default in case of fall through
+                            break;
+                    }
+                </code></pre>
                 <p>Note be sure to break after each case, or all cases will be evaluated.</p>
 
 
@@ -90,6 +111,7 @@
                 <p>Loops also have a <span class="emphasize">continue</span> statement which will skip the rest of the code in the loop and start again at the top of the loop.</p>
 
                 <h3>Assignment - FizzBuzz</h3>
+                <p><a href="java/FizzBuzz.java" download>Stub code</a></p>
                 <p>The assignment is to print statements at certain intervals. Loop 100 times and print the number of the loop at each interval. Also if the interval is divisble by 3 print "Fizz". If the interval number is divisible by 5 print "Buzz". If divisible by both 3 and 5 print "FizzBuzz"</p>
                 <p>As a hint for this assignment, use the % operator which returns the remainder of a product.</p>
 

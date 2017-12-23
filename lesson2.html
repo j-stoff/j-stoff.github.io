@@ -31,42 +31,60 @@
             </div>
             <div class="content">
                 <h4>Taking a look at the HelloWorld.java in a text editor, some of the words should seem familiar.</h4>
-                <p>For example: "public class HelloWorld {}" is the full class declaration</p>
+                <pre>
+                    <code>
+                    public class HelloWorld {}
+                    </code>
+                </pre>
+                <p>The above is a valid class declaration (though not very useful)</p>
                 <p>In it, the code is saying I have a class called 'HelloWorld' that is for public use.</p>
-                <p>Additionally, inside the class is the main method 'public static void main(String args[])' is how to declare a method that the JVM looks for.</p>
-                <p>Finally, within the code is 'System.out.println()' which has a String as a parameter.</p>
-                <p>Analyzing the last portion, the meaning is that there is a System object that Java knows about, it has a field called out for standard output, and a method called 'println' which can take almost any arguement and print it to the console <i>with</i> a carriage return and new line feed.</p>
+                <pre>
+                    <code>
+                    public static void main(String args[]) {}
+                    </code>
+                </pre>
+                <p>Above is the main method for almost every java program, something the JVM looks for in order to excute code.</p>
+                <pre>
+                    <code>
+                    System.out.println();
+                    </code>
+                </pre>
+                <p>Analyzing the last portion, the meaning is that there is a System object that Java knows about, it has a field called out for standard output (the .out), and a method called 'println' which can take almost any arguement and print it to the console <i>with</i> a carriage return and new line feed.</p>
+                <p>Also important to note, Java is based on C meaning each line ends with a semi-colon or curly brace. NO EXCEPTIONS.</p>
 
-                <h4>Now you should be able to run and compile Java code.</h4>
+                <h4>After running the HelloWorld program, compiling and running code is that simple.</h4>
                 <p>Note: the file name and the class within the file must match or the compiler will throw an error. This is always true and why version control can be a pain sometimes.</p>
-                <p>Note: This is also why Java class names are capitalized and use camel case as a standard because the compiler doesn't care if a class begins with a lower case; it just makes sure the file name matches the class name.</p>
+                <p>Note: This is also why Java class names are capitalized and use camel case as a standard because the compiler doesn't care if a class begins with a lower case; it just makes sure the file name matches the class name. Convention dictates to capitalize class names in most languages.</p>
+                <p>Note: There is also a way to compile the .class files into a separate directory to keep the source code separate from executables.</p>
 
                 <h4>That should have been fairly easy, so onto actually writing some code.</h4>
                 <p>First thing would be to know about Java Data types as there are only two - primitives and pointers to objects. The first, primitives, are classically what you might think of as variables, integers, characters, boolean values are all primitives. The other, object references (pointers as I have been calling them), represent the vast majority of variable types used. Even String is an object, not a primitive.</p>
 
                 <p>A full list of primitives is below:</p>
                 <ul>
-                    <li>boolean</li>
-                    <li>int</li>
-                    <li>short</li>
-                    <li>char</li>
-                    <li>float</li>
-                    <li>double</li>
-                    <li>long</li>
-                    <li>byte</li>
+                    <li>boolean - true or false</li>
+                    <li>int - from -2^31 to 2^31 - 1</li>
+                    <li>short - -32,768 to 32,768</li>
+                    <li>char - 16 bit unicode value. use single quotes.</li>
+                    <li>float - 32 bit decimal number (use double most of the time)</li>
+                    <li>double - 64 bit, decimal number</li>
+                    <li>long - 64 bit, -2^63 to 2^63 - 1</li>
+                    <li>byte - 8 bits, from -128 to 127</li>
                 </ul>
+
+                <h4>Everything else is a refence (pointer). Even Strings.</h4>
 
                 <h4>Onto another topic: Operators</h4>
                 <p>Operators are present in all languages I know of though sometimes in different forms. They are very similar to mathematical operators with some variations.</p>
 
                 <p>The list of common operators in Java:</p>
                 <ul>
-                    <li>=   is the operator for assignment</li>
-                    <li>+   is for mathematical addition or string concatenation</li>
-                    <li>-   is for subtraction</li>
-                    <li>*   is for multiplication</li>
-                    <li>/   is for division</li>
-                    <li>%   is the modulus which returns the remainder</li>
+                    <li><pre><code>=   is the operator for assignment</code><pre></li>
+                    <li><pre><code>+   is for mathematical addition or string concatenation</code></pre></li>
+                    <li><pre><code>-   is for subtraction</code><pre></li>
+                    <li><pre><code>*   is for multiplication</code><pre></li>
+                    <li><pre><code>/   is for division</code><pre></li>
+                    <li><pre><code>%   is the modulus which returns the remainder</code><pre></li>
                 </ul>
 
                 <p>The order of operation is at a default from left to right. Multiplication and division have a higher precedence than addition and subtraction. Assignment is one of the lowest predences.</p>
@@ -77,7 +95,8 @@
 
                 <h4>Logical Operators</h4>
                 <p>The logical operators return true if the evaluated statement is true or false if it is not.</p>
-                <p>For example <span class="emphasize">3 > 2</span> would return <b>true</b>. While <span class="emphasize">3 < 2</span> would be <b>false</b>.</p>
+                <p>The standard greater than, greater than or equal to, less than, less than or equal to are present.</p>
+                <p>For example <span class="emphasize">(3 > 2)</span> would return <b>true</b>. While <span class="emphasize">(3 < 2)</span> would be <b>false</b>.</p>
                 <p>Additionally, there is also <span class="emphasize">>=</span> for greater than or equal to, and <span class="emphasize"><=</span> for less than or equal to.</p>
                 <p>Judging equality is with <span class="emphasize">==</span></p>
                 <p>Note, all of these ONLY WORK FOR PRIMITIVES. Comparing objects is done with the .equals() method.</p>
@@ -86,22 +105,22 @@
                 <h4>Declaring variables</h4>
                 <p>Java is a strongly typed language meaning that the 'type' of the variable must be declared when the variable is declared.</p>
                 <p>For example:</p>
-                <p>int index;</p>
+                <pre><code> int index;</code></pre>
                 <p>Simply declares an integer called index for further use.</p>
                 <p>Other examples:</p>
-                <p>double bigNumber;</p>
-                <p>boolean didItWork;</p>
+                <pre><code> double bigNumber;</code></pre>
+                <pre><code> boolean didItWork;</code></pre>
 
                 <p>Note for chars: Chars must use single quotes when declaring a single character. Double quotes indicates a string. The converse isn't always true as 'this is a string' is a string.</p>
 
                 <p>Next, assignment of the variable to an initial value can take place in one step</p>
-                <p>int index = 10;</p>
+                <pre><code> int index = 10;</code></pre>
                 <p>The index value starts at 10 instead of 0 (that is where integers begin).</p>
                 <p>It is a good idea to explicitly initialize variables in order to avoid silly mistakes.</p>
-                <p>Side note, when using numbers, typically only use integers and doubles. Floats, longs, and shorts have specific use cases for memory preformance but the difference between a 16 bit float versus a 32 bit double is not much. Changing a bunch of code from a float to a double would be.</p>
+                <p>Side note, when using numbers, typically only use integers and doubles. Floats, longs, and shorts have specific use cases for memory preformance but the difference between a 32 bit float versus a 64 bit double is not much. Changing a bunch of code from a float to a double would be.</p>
 
                 <h4>Assignment</h4>
-                <p>Declare 4 variables</p>
+                <p>Declare 4 variables. Use <a href="java/LessonTwo.java" download>this</a></p>
                 <p>Two integers called numberOne and numberTwo</p>
                 <p>A boolean value set to false</p>
                 <p>Finally, a String initialized with your name (eg: String name = "Bob")</p>
@@ -109,7 +128,7 @@
                 <p>With your variables, called three print statements.</p>
                 <p>The first, call numberOne > numberTwo as a parameter</p>
                 <p>Second call the boolean value</p>
-                <p>Third, use String concatenation to combine "My name is: " with your 'name' variable.</p>
+                <p>Third, use String concatenation to combine "My name is: " combined with your 'name' variable.</p>
 
             </div>
             <div class="empty-right"></div>
