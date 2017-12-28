@@ -1,81 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lesson 1</title>
-    <link rel="stylesheet" type="text/css" href="style/master.css">
+    <title>Lesson One</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amiri' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style/master.css"> 
 </head>
 <body>
-    <div class="grid-container">
-        <div class="navbar">
-            <ul class="navbar-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="todo.html">TODO</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a class="active" href="lessons.html">Lessons</a></li>
-            </ul>
-        </div>
-
-        <div class="projects">
-            <h3>Projects</h3>
-                <ul>
-                    <li><a href="https://github.com/j-stoff/charge">Charge! Game</a></li>
-                    <li><a href="https://github.com/j-stoff/my_next_book">Your Next book</a></li>
-                    <li><a href="https://github.com/j-stoff/PythonWeb">Python web development</a></li>
-                </ul>
-        </div>
-
-        <div class="content-container">
-            <div class="header">
-                <h2>Lesson 1 - Running Java</h2>
+    <div class="container-fluid fullpage main no-padding">
+        <div class="col-sm-2 panel-group fullpage no-padding projects-container">
+            <div class="fullpage projects">
+                <div class="projects-header">
+                    <h3>Projects</h3>
+                </div>
+                <div class="projects-list">
+                    <ul>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/charge"><li>Charge! Game</li></a>
+                        <hr />
+                        <a href="https://github.com/j-stoff/my_next_book"><li>Your Next book</li></a>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/PythonWeb"><li>Python web development</li></a>
+                    </ul>
+                </div>
             </div>
-            <div class="content">
-                <h4>First off, pick a text editor. Some ideas below.</h4>
-                <ul>
-                    <li>Sublime Text 3</li>
-                    <li>Atom</li>
-                    <li>Textmate</li>
-                    <li>Notepad++</li>
-                </ul>
-
-                <h4>Some terminology</h4>
-                    <p><b>Object</b></p>
-                        <p>An object is simply a container for variables and methods. Every class inherits from the Object type (more on inheritance later).</p>
-                    <p><b>Class</b></p>
-                        <p>A class is a type of <i>object</i> but Java recognizes code at the class level, not at the object level. Almost every bit of code in Java is within a class. Similar to how C requires a 'int main' function to run the code, Java uses classes as the backbone to run code.</p>
-                    <p><b>Method</b></p>
-                        <p>A method is a function within a class. Typically this gives the class some functionality, so for example, a BufferedReader Class contains methods that would be useful for reading a file's contents such as readLine() which reads one line of the file and advances file pointer.</p>
-                    <p><b>Instance variable</b></p>
-                        <p>Similar to 'properties' in other languages, they comprise local variables within a class that are required for a class to operate. Going on with the BufferedReader class example, a useful instance variable would be a String containing the name of the file.</p>
-
-
-                <h4>Now, open a command prompt up as this will be the simplest way to confingure Java code.</h4>
-                    <p>Once open, navigate to a desired work directory.</p>
-
-
-                <h4>Project Structure</h4>
-                    <p>Setting up a project structure is critical for managing files, dependencies, and an overall good practice.</p>
-                    <p>For the moment, just create a main folder that will house everything.</p>
-                    <p>Within that folder, create another folder for Lesson One.</p>
-
-                <h4>Next, check which version of java is currently installed on the machine.</h4>
-                    <p>Note: The easiest way to find the most recent running version is in a command prompt using the command <span class="emphasize">java -version</span> (others may be installed but whichever is currently being used will run)</p>
-                    <p>1.X where X gives the current Java version (This will change in Java 9 which is just being referred to as Java 9, not 1.9).</p>
-
-                <h4>Next, download <a href="java/HelloWorld.java" download>this</a></h4>
-
-                <h4>Compiling and running the code</h4>
-                    <p>At the command line, type 'javac Hello' and press tab to auto-complete the HelloWorld.java file. This will compile the code into HelloWorld.class file.</p>
-                    <p>Run the code with 'java Hello' and again tab to complete the proper sequence. Note you do not need to add 'HelloWorld.class' as the computer will know that 'HelloWorld' is executable.</p>
-
-                <h4>Note at the console in the next line, "Hello World!" should be printed as the program ran successfully or a compilation error happened.</h4>
-
-            </div>
-            <div class="empty-right"></div>
         </div>
-        <div class="footer"></div>
+        <div class="navbar navbar-inverse col-sm-10">
+            <div class="container-fluid row">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="todo.html">TODO</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a class="active-link" href="lessons.html">Lessons</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="tictactoe.html">Game</a></li>
+                </ul>
+            </div>
+        </div>
+
         
-    </div>
+        <div class="container-fluid col-sm-10 content-main">
+            <div class="row content-container">
+                <div class="header">
+                    <h2>Lesson 1 - Running Java</h2>
+                </div>
+        
+                <div class="content col-sm-10">
+                    <h4>First off, pick a text editor. Some ideas below.</h4>
+                        <ul>
+                            <li>Sublime Text 3</li>
+                            <li>Atom</li>
+                            <li>Textmate</li>
+                            <li>Notepad++</li>
+                        </ul>
 
+                    <h4>Some terminology</h4>
+                        <p><b>Object</b></p>
+                            <p>An object is simply a container for variables and methods. Every class inherits from the Object type (more on inheritance later).</p>
+                        <p><b>Class</b></p>
+                            <p>A class is a type of <i>object</i> but Java recognizes code at the class level, not at the object level. Almost every bit of code in Java is within a class. Similar to how C requires a 'int main' function to run the code, Java uses classes as the backbone to run code.</p>
+                        <p><b>Method</b></p>
+                            <p>A method is a function within a class. Typically this gives the class some functionality, so for example, a BufferedReader Class contains methods that would be useful for reading a file's contents such as readLine() which reads one line of the file and advances file pointer.</p>
+                        <p><b>Instance variable</b></p>
+                            <p>Similar to 'properties' in other languages, they comprise local variables within a class that are required for a class to operate. Going on with the BufferedReader class example, a useful instance variable would be a String containing the name of the file.</p>
+
+
+                    <h4>Now, open a command prompt up as this will be the simplest way to confingure Java code.</h4>
+                        <p>Once open, navigate to a desired work directory.</p>
+
+
+                    <h4>Project Structure</h4>
+                        <p>Setting up a project structure is critical for managing files, dependencies, and an overall good practice.</p>
+                        <p>For the moment, just create a main folder that will house everything.</p>
+                        <p>Within that folder, create another folder for Lesson One.</p>
+
+                    <h4>Next, check which version of java is currently installed on the machine.</h4>
+                        <p>Note: The easiest way to find the most recent running version is in a command prompt using the command <span class="emphasize">java -version</span> (others may be installed but whichever is currently being used will run)</p>
+                        <p>1.X where X gives the current Java version (This will change in Java 9 which is just being referred to as Java 9, not 1.9).</p>
+
+                    <h4>Next, download <a href="java/HelloWorld.java" download>this</a></h4>
+
+                    <h4>Compiling and running the code</h4>
+                        <p>At the command line, type 'javac Hello' and press tab to auto-complete the HelloWorld.java file. This will compile the code into HelloWorld.class file.</p>
+                        <p>Run the code with 'java Hello' and again tab to complete the proper sequence. Note you do not need to add 'HelloWorld.class' as the computer will know that 'HelloWorld' is executable.</p>
+
+                    <h4>Note at the console in the next line, "Hello World!" should be printed as the program ran successfully or a compilation error happened.</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer"></div>
+    </div>
 </body>
 </html>

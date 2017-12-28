@@ -2,122 +2,163 @@
 <html>
 <head>
     <title>Lesson 4</title>
-    <link rel="stylesheet" type="text/css" href="style/master.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amiri' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style/master.css"> 
 </head>
 <body>
-    <div class="grid-container">
-        <div class="navbar">
-            <ul class="navbar-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="todo.html">TODO</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a class="active" href="lessons.html">Lessons</a></li>
-            </ul>
+    <div class="container-fluid fullpage main no-padding">
+        <div class="col-sm-2 panel-group fullpage no-padding projects-container">
+            <div class="fullpage projects">
+                <div class="projects-header">
+                    <h3>Projects</h3>
+                </div>
+                <div class="projects-list">
+                    <ul>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/charge"><li>Charge! Game</li></a>
+                        <hr />
+                        <a href="https://github.com/j-stoff/my_next_book"><li>Your Next book</li></a>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/PythonWeb"><li>Python web development</li></a>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        <div class="projects">
-            <h3>Projects</h3>
-                <ul>
-                    <li><a href="https://github.com/j-stoff/charge">Charge! Game</a></li>
-                    <li><a href="https://github.com/j-stoff/my_next_book">Your Next book</a></li>
-                    <li><a href="https://github.com/j-stoff/PythonWeb">Python web development</a></li>
+        <div class="navbar navbar-inverse col-sm-10">
+            <div class="container-fluid row">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="todo.html">TODO</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a class="active-link" href="lessons.html">Lessons</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="tictactoe.html">Game</a></li>
                 </ul>
+            </div>
         </div>
 
-        <div class="content-container">
-            <div class="header">
-                <h2>Lesson 4</h2>
+        
+        <div class="container-fluid col-sm-10 content-main">
+            <div class="row content-container">
+                <div class="header">
+                    <h2>Lesson 4</h2>
+                </div>
+        
+                <div class="content col-sm-10">
+                    <h4>More clarification on previous code</h4>
+                    <p>Now we will look at writing our own class definitions. For now, ignore the scope definition (public) for the moment.</p>
+                    <p>As you probably guessed, 'class' in the class definition is create a class of the given name.</p>
+<pre>
+<code>
+public class ExampleClass {
+//Code here
+}
+</code>
+</pre>
+
+                    <h4>Onto something new - Variables</h4>
+                    <p>How do you add variables to a class?</p>
+                    <p>For now, the same way to declaring as a method works. Though there is a better way, more on that later.</p>
+                    <p>Using the same class as before:</p>
+<pre>
+<code>
+public class ExampleClass {
+    int lessonsCompeteled;
+    boolean doingTheAssignments;
+}
+</code>
+</pre>
+
+
+                    <h4>Now the good stuff: Methods</h4>
+                    <p>Variables are nice, but they only store things. Useful for later on, but databases are for storage, programs are supposed to do something.</p>
+                    <p>Jumping right into it</p>
+<pre>
+<code>
+public void myMethod(String user) {
+    // Code here
+}
+</code>
+</pre>
+                    <p>This is a full method declaration. Though the access modifier is not needed, one is used almost always.</p>
+                    <p>The next field is for the return type. It can be a primitive, Object type, or void which returns nothing.</p>
+                    <p>Next is the name for the method. Again, convention has camel case beginning with a smaller case letter and capitalizing new words. The more descriptive the method, the better.</p>
+                    <p>The parentheis are for arguments. When declaraing parameters, the type is needed as well as a local name to be used within the method. In the example above, a String is a parameter with the name 'user'.</p>
+                    <p>Parameters are not optional, but aren't always handled correctly within methods. Be careful what is passed to a method is what it should be.</p>
+                    <p>Lastly, the curly braces contain the code to execute for the method.</p>
+
+                    <h4>Why even put things into classes?</h4>
+                    <p>Code reusability. It's that simple. Well written code can be re-used very frequently with little overhead to the developer.</p>
+
+                    <h4>Scope</h4>
+                    <p>For now I have been ignoring the 'public' declarations as well as static defitions as they deal with scope.</p>
+                    <p>We will tackle these in the future, but for the moment everything is scoped within the context it was declared.</p>
+                    <p>For example, a variable made in a method will survive the duration of the method. A variable declared within a class is usable as long as the reference to the class is active.</p>
+<pre>
+<code>
+public class ExampleClass {
+    int lessonsCompeteled;
+    boolean doingTheAssignments;
+
+    public void myMethod(String user) {
+    // Some cool code
+    int big;
+    }
+}
+</code>
+</pre>
+                    <p>Using the example above. What is the scope for 'doingTheAssignments'? What about 'big' within myMethod?</p>
+
+                    <h4>Creating class refences</h4>
+                    <p>The majority of the variables will be references to pre-made classes as they have greater functionality than primitives.</p>
+                    <p>To create a class use the 'new' keyword then the class name with parenthesis. Similar to a function call.</p>
+<pre>
+<code>
+ArrayList list = new ArrayList();
+</code>
+</pre>
+                    <p>The parenthesis actually calls the 'constructor' which is something we will get to soon.</p>
+
+                    <p>Note: Strings do not require a 'new' keyword for each string.</p>
+<pre>
+<code>
+String name = "bob";
+</code>
+</pre>
+
+                    <h4>Exercise - Cars</h4>
+                        <p>Create a class called Car</p>
+                        <p>Give the Car class 3 variables.</p>
+                        <p>The VIN (vehicle id number) as a string.</p>
+                        <p>The car type as a String.</p>
+                        <p>An int with number of miles.</p>
+                        <p>Create a method called carFacts() that prints all variables to the console.</p>
+                        <p>Create your own runner class (class with main method, use others as examples).</p>
+                        <p>Create a reference to a Car Object in the runner.
+                        Call the carFacts() method. Compile and execute.</p>
+
+                </div>
             </div>
-            <div class="content">
-                <h4>More clarification on previous code</h4>
-                <p>Now we will look at writing our own class definitions. For now, ignore the scope definition (public) for the moment.</p>
-                <p>As you probably guessed, 'class' in the class definition is create a class of the given name.</p>
-                <pre><code>
-                    public class ExampleClass {
-                        //Code here
-                    }
-                </code></pre>
-
-                <h4>Onto something new - Variables</h4>
-                <p>How do you add variables to a class?</p>
-                <p>For now, the same way to declaring as a method works. Though there is a better way, more on that later.</p>
-                <p>Using the same class as before:</p>
-                <pre><code>
-                    public class ExampleClass {
-                        int lessonsCompeteled;
-                        boolean doingTheAssignments;
-                    }
-                </code></pre>
-
-
-                <h4>Now the good stuff: Methods</h4>
-                <p>Variables are nice, but they only store things. Useful for later on, but databases are for storage, programs are supposed to do something.</p>
-                <p>Jumping right into it</p>
-                <pre><code>
-                    public void myMethod(String user) {
-                        // Code here
-                    }
-                </code></pre>
-                <p>This is a full method declaration. Though the access modifier is not needed, one is used almost always.</p>
-                <p>The next field is for the return type. It can be a primitive, Object type, or void which returns nothing.</p>
-                <p>Next is the name for the method. Again, convention has camel case beginning with a smaller case letter and capitalizing new words. The more descriptive the method, the better.</p>
-                <p>The parentheis are for arguments. When declaraing parameters, the type is needed as well as a local name to be used within the method. In the example above, a String is a parameter with the name 'user'.</p>
-                <p>Parameters are not optional, but aren't always handled correctly within methods. Be careful what is passed to a method is what it should be.</p>
-                <p>Lastly, the curly braces contain the code to execute for the method.</p>
-
-                <h4>Why even put things into classes?</h4>
-                <p>Code reusability. It's that simple. Well written code can be re-used very frequently with little overhead to the developer.</p>
-
-                <h4>Scope</h4>
-                <p>For now I have been ignoring the 'public' declarations as well as static defitions as they deal with scope.</p>
-                <p>We will tackle these in the future, but for the moment everything is scoped within the context it was declared.</p>
-                <p>For example, a variable made in a method will survive the duration of the method. A variable declared within a class is usable as long as the reference to the class is active.</p>
-                 <pre><code>
-                    public class ExampleClass {
-                        int lessonsCompeteled;
-                        boolean doingTheAssignments;
-                        
-                        public void myMethod(String user) {
-                            // Some cool code
-                            int big;
-                        }
-                    }
-                </code></pre>
-                <p>Using the example above. What is the scope for 'doingTheAssignments'? What about 'big' within myMethod?</p>
-
-                <h4>Creating class refences</h4>
-                <p>The majority of the variables will be references to pre-made classes as they have greater functionality than primitives.</p>
-                <p>To create a class use the 'new' keyword then the class name with parenthesis. Similar to a function call.</p>
-                <pre><code>
-                    ArrayList list = new ArrayList();
-                </code></pre>
-                <p>The parenthesis actually calls the 'constructor' which is something we will get to soon.</p>
-
-                <p>Note: Strings do not require a 'new' keyword for each string.</p>
-                <pre><code>
-                    String name = "bob";
-                </code></pre>
-
-                <h4>Exercise - Cars</h4>
-                    <p>Create a class called Car</p>
-                    <p>Give the Car class 3 variables.</p>
-                    <p>The VIN (vehicle id number) as a string.</p>
-                    <p>The car type as a String.</p>
-                    <p>An int with number of miles.</p>
-                    <p>Create a method called carFacts() that prints all variables to the console.</p>
-                    <p>Create your own runner class (class with main method, use others as examples).</p>
-                    <p>Create a reference to a Car Object in the runner.
-                    Call the carFacts() method. Compile and execute.</p>
-
-
-            </div>
-            <div class="empty-right"></div>
         </div>
 
         <div class="footer"></div>
-        
     </div>
-
 </body>
 </html>

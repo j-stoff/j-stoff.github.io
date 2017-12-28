@@ -2,41 +2,75 @@
 <html>
 <head>
     <title>Main</title>
-    <link rel="stylesheet" type="text/css" href="style/master.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amiri' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style/master.css"> 
 </head>
 <body>
-    <div class="grid-container">
-        <div class="navbar">
-            <ul class="navbar-list">
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="todo.html">TODO</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="lessons.html">Lessons</a></li>
-                <li><a href="tictactoe.html">Game</a></li>
-            </ul>
+    <div class="container-fluid fullpage main no-padding">
+        <div class="col-sm-2 panel-group fullpage no-padding projects-container">
+            <div class="fullpage projects">
+                <div class="projects-header">
+                    <h3>Projects</h3>
+                </div>
+                <div class="projects-list">
+                    <ul>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/charge"><li>Charge! Game</li></a>
+                        <hr />
+                        <a href="https://github.com/j-stoff/my_next_book"><li>Your Next book</li></a>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/PythonWeb"><li>Python web development</li></a>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
-        <div class="content-container">
-        <div class="header">
-            <h2>A place for organization</h2>
-        </div>
-        
-        <div class="content">
-            <p>I mainly use this space to organize projects, list skills I've acquired, and keep track of my interests within programming.</p>
-            <p>This is a relatively static web page in that it only uses HTML, CSS, and a little Javascript.</p>
-            <p>The major purpose of this site is to keep an ordered collection of my works, my accomplishments, and my ever growing areas of interest - see the TODO page.</p>
-        </div>
-        <div class="empty-right"></div>
-        </div>
-        <div class="projects">
-            <h3>Projects</h3>
-                <ul>
-                    <li><a href="https://github.com/j-stoff/charge">Charge! Game</a></li>
-                    <li><a href="https://github.com/j-stoff/my_next_book">Your Next book</a></li>
-                    <li><a href="https://github.com/j-stoff/PythonWeb">Python web development</a></li>
+        <div class="navbar navbar-inverse col-sm-10">
+            <div class="container-fluid row">
+                <ul class="nav navbar-nav">
+                    <li><a class="active-link" href="#">Home</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="todo.html">TODO</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="tictactoe.html">Game</a></li>
                 </ul>
+            </div>
         </div>
+
+        
+        <div class="container-fluid col-sm-10 content-main">
+            <div class="row content-container">
+                <div class="header">
+                    <h2>A place for organization</h2>
+                </div>
+        
+                <div class="content col-sm-10">
+                    <h3 class="topic-header">Topic header</h3>
+                    <p>I mainly use this space to organize projects, list skills I've acquired, and keep track of my interests within programming.</p>
+                    <p>This is a relatively static web page in that it only uses HTML, CSS, and a little Javascript.</p>
+                    <h4 class="subject-header">Subject header</h4>
+                    <p>The major purpose of this site is to keep an ordered collection of my works, my accomplishments, and my ever growing areas of interest - see the TODO page.</p>
+                </div>
+            </div>
+        </div>
+
         <div class="footer"></div>
     </div>
 </body>

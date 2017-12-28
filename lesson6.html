@@ -1,156 +1,185 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lesson 6</title>
-    <link rel="stylesheet" type="text/css" href="style/test.css">
+    <title>Lesson Six</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amiri' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style/master.css"> 
 </head>
 <body>
-    <div class="grid-container">
-        <div class="navbar">
-            <ul class="navbar-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="todo.html">TODO</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a class="active" href="lessons.html">Lessons</a></li>
-            </ul>
-        </div>
-
-        <div class="projects">
-            <h3>Projects</h3>
-                <ul>
-                    <li><a href="https://github.com/j-stoff/charge">Charge! Game</a></li>
-                    <li><a href="https://github.com/j-stoff/my_next_book">Your Next book</a></li>
-                    <li><a href="https://github.com/j-stoff/PythonWeb">Python web development</a></li>
-                </ul>
-        </div>
-
-        <div class="content-container">
-            <div class="header">
-                <h2>Lesson 6 - Deeper into Object Orientation</h2>
+    <div class="container-fluid fullpage main no-padding">
+        <div class="col-sm-2 panel-group fullpage no-padding projects-container">
+            <div class="fullpage projects">
+                <div class="projects-header">
+                    <h3>Projects</h3>
+                </div>
+                <div class="projects-list">
+                    <ul>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/charge"><li>Charge! Game</li></a>
+                        <hr />
+                        <a href="https://github.com/j-stoff/my_next_book"><li>Your Next book</li></a>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/PythonWeb"><li>Python web development</li></a>
+                    </ul>
+                </div>
             </div>
-            <div class="content">
-                <h3>Scope</h3>
-                <p>By now, the 'public' keyword has been used quite a bit with no explanation.</p>
-                <p>'public' is known as an <span class="emphasize">Access Modifier</span> as it declares how the information can be accessed.</p>
-                    <h4>Public</h4>
-                <p>Public is the simplest example. Anyone and anything can access public variables and methods.</p>
-                    <h4>Protected</h4>
-                <p>Protected indicates that only classes that inherit from the class hierarchy can access these methods and variables.</p>
-                    <h4>Private</h4>
-                <p>Private is the strictest as only the class has access to the these variables and methods.</p>
-                    <h4>Default</h4>
-                <p>The basic privelege given if no access modifier is given. Not as strict as protected but not as open as public.</p>
-                <p>Note: <span class="emphasize">All instance variables</span> should be declared as private. The reasoning is that the variables should not be changed unless through accepted means (see getters/setters)</p>
-                <p>Having private instance variables increases security as the only way to access the variable is through methods the developer has written.</p>
+        </div>
+        <div class="navbar navbar-inverse col-sm-10">
+            <div class="container-fluid row">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="todo.html">TODO</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a class="active-link" href="lessons.html">Lessons</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="tictactoe.html">Game</a></li>
+                </ul>
+            </div>
+        </div>
 
-                <h3>Getters and Setters</h3>
-                <p>As I said above, the convention for java is that all instance variables of a class are declared as 'private' meaning only the class has access.</p>
+        
+        <div class="container-fluid col-sm-10 content-main">
+            <div class="row content-container">
+                <div class="header">
+                    <h2>Lesson Six</h2>
+                </div>
+        
+                <div class="content col-sm-10">
+                    <h3 class="topic-header">Scope</h3>
+                    <p>By now, the 'public' keyword has been used quite a bit with no explanation.</p>
+                    <p>'public' is known as an <span class="emphasize">Access Modifier</span> as it declares how the information can be accessed.</p>
+                        <h4 class="subject-header">Public</h4>
+                    <p>Public is the simplest example. Anyone and anything can access public variables and methods.</p>
+                        <h4 class="subject-header">Protected</h4>
+                    <p>Protected indicates that only classes that inherit from the class hierarchy can access these methods and variables.</p>
+                        <h4 class="subject-header">Private</h4>
+                    <p>Private is the strictest as only the class has access to the these variables and methods.</p>
+                        <h4 class="subject-header">Default</h4>
+                    <p>The basic privelege given if no access modifier is given. Not as strict as protected but not as open as public.</p>
+                    <p>Note: <span class="emphasize">All instance variables</span> should be declared as private. The reasoning is that the variables should not be changed unless through accepted means (see getters/setters)</p>
+                    <p>Having private instance variables increases security as the only way to access the variable is through methods the developer has written.</p>
 
-                <p>That might seem rather limiting as other things might need the information within those variables.</p>
+                    <h3 class="topic-header">Getters and Setters</h3>
+                        <p>As I said above, the convention for java is that all instance variables of a class are declared as 'private' meaning only the class has access.</p>
 
-                <p>Here is where a get/set methods come into play. Commonly called getter/setters.</p>
+                        <p>That might seem rather limiting as other things might need the information within those variables.</p>
 
-                <p>The idea behind getters is to return the current value within the variable. A setter assigns the variable to a new value.</p>
+                        <p>Here is where a get/set methods come into play. Commonly called getter/setters.</p>
 
-                <pre>
-                    <code>
-                    private int myAge;
+                        <p>The idea behind getters is to return the current value within the variable. A setter assigns the variable to a new value.</p>
 
-                    public int getMyAge() {
-                        return this.myAge;
-                    }
+<pre>
+<code>
+private int myAge;
 
-                    public void setMyAge(int diffAge) {
-                        myAge = diffAge;
-                    }
-                    
-                    </code>
-                </pre>
+public int getMyAge() {
+    return this.myAge;
+}
 
-                <p>Lets analyze the code example above. First an integer is declared called 'myAge'. This is private access meaning only the class knows about it.</p>
+public void setMyAge(int diffAge) {
+    myAge = diffAge;
+}
 
-                <p>
-                    Next is the <span class="emphasize">Getter</span>
-                    method. It is public and returns an int which is the current value of 'myAge'.
-                    Note the use of 'this' keyword. 'this' refers to the class which the code is a part of.
-                </p>
+</code>
+</pre>
 
-                <p>
-                    Finally the <span class="emphasize">Setter</span> method. Again it is public but has no return value. Unlike the getter, it has one parameter that will be assigned to the variable.
-                </p>
+                    <p>Lets analyze the code example above. First an integer is declared called 'myAge'. This is private access meaning only the class knows about it.</p>
 
-                <h4>What is the point?</h4>
-                <p>Couldn't the variables just be default? Or even public.</p>
-                <p>The answer is yes, but that would be a big security flaw as well as bad pracitice. The reason being, anyone using the code with a little knowledge could change the variables very easily with simple assignment.</p>
-                <p>Getters and Setters provide a way that if the programmer wants to alter how the variable is accessed or changed, that it is done so in a specific way so the class doesn't screw up.</p>
+                    <p>
+                        Next is the <span class="emphasize">Getter</span>
+                        method. It is public and returns an int which is the current value of 'myAge'.
+                        Note the use of 'this' keyword. 'this' refers to the class which the code is a part of.
+                    </p>
 
-                <h3>Constructor</h3>
-                <p>On the subject of skipped topics. The 'new' keyword when declaring a class as well as the reason for parenthesis isn't clear quite yet.</p>
-                <p>The reason is that the 'new' keyword combined with a class's name and parenthesis calls a <span class="emphasize">constructor</span>.</p>
+                    <p>
+                        Finally the <span class="emphasize">Setter</span> method. Again it is public but has no return value. Unlike the getter, it has one parameter that will be assigned to the variable.
+                    </p>
 
-                <h3>What is a constructor</h3>
-                <p>A constructor is a method that creates an instance of the class (itself) to return.</p>
+                    <h4 class="subject-header">What is the point?</h4>
+                    <p>Couldn't the variables just be default? Or even public.</p>
+                    <p>The answer is yes, but that would be a big security flaw as well as bad pracitice. The reason being, anyone using the code with a little knowledge could change the variables very easily with simple assignment.</p>
+                    <p>Getters and Setters provide a way that if the programmer wants to alter how the variable is accessed or changed, that it is done so in a specific way so the class doesn't screw up.</p>
 
-                <pre>
-                    <code>
-                        public File() {
-                            // Initialization code
-                        }
-                    </code>
-                </pre>
+                    <h3 class="topic-header">Constructor</h3>
+                    <p>On the subject of skipped topics. The 'new' keyword when declaring a class as well as the reason for parenthesis isn't clear quite yet.</p>
+                    <p>The reason is that the 'new' keyword combined with a class's name and parenthesis calls a <span class="emphasize">constructor</span>.</p>
 
-                <p>Constructors serve to initialize code within a class. For example, if there are some variables that are Objects, they need to be created so they are not null.</p>
+                    <h4 class="subject-header">What is a constructor</h4>
+                    <p>A constructor is a method that creates an instance of the class (itself) to return.</p>
 
-                <p>Notice above, the constructor has no parameters which is called a <span class="emphasize"> No Arg constructor or Empty constructor</span>. It is good practice to put one of these in regardless of other constructors.</p>
-                <h4>But wait, if a class needs a constructor, how did the code run before.</h4>
-                <p>The JVM is smart, it figures out that if a constructor isn't declared that a no-arg constructor is assumed which will work in all cases for the class.</p>
-                <p>The downside to having a smart JVM is that if any other type of constructor is declared, that is it. That is why it is common to have a No-Arg constructor as well as other constructors that are for convience.</p>
+<pre>
+<code>
+public File() {
+    // Initialization code
+}
+</code>
+</pre>
 
-                <h3>Overloading and Overriding. The difference is?</h3>
-                <p>I mentioned above that a class can have several types of constructors. How is that possible? How does the JVM know which constructor to use?</p>
-                <h4>The answer is Overloading</h4>
-                <p><span class="emphasize">Overloading</span> is when a method or constructor has multiple definitions that have different parameter requirements but preform the same action and return the same type.</p>
+                    <p>Constructors serve to initialize code within a class. For example, if there are some variables that are Objects, they need to be created so they are not null.</p>
 
-                <pre>
-                    <code>
-                        // No Arg constructor
-                        public File() {
-                        }
+                    <p>Notice above, the constructor has no parameters which is called a <span class="emphasize"> No Arg constructor or Empty constructor</span>. It is good practice to put one of these in regardless of other constructors.</p>
+                    <h4>But wait, if a class needs a constructor, how did the code run before.</h4>
+                    <p>The JVM is smart, it figures out that if a constructor isn't declared that a no-arg constructor is assumed which will work in all cases for the class.</p>
+                    <p>The downside to having a smart JVM is that if any other type of constructor is declared, that is it. That is why it is common to have a No-Arg constructor as well as other constructors that are for convience.</p>
 
-                        public File(String fileName) {
-                            // Do something
-                        }
-                    </code>
-                </pre>
+                    <h3 class="topic-header">Overloading and Overriding. What are they?</h3>
+                    <p>I mentioned above that a class can have several types of constructors. How is that possible? How does the JVM know which constructor to use?</p>
+                    <h4>The answer is Overloading</h4>
+                    <p><span class="emphasize">Overloading</span> is when a method or constructor has multiple definitions that have different parameter requirements but preform the same action and return the same type.</p>
 
-                <p>In the example above, the default no-argument constructor is present with no parameters at all. Another constructor takes a String for a given file name.</p>
+<pre>
+<code>
+// No Arg constructor
+public File() {
+}
 
-                <h4>So what is Overriding?</h4>
-                <p>Overriding is actually very different, but still deals with methods.</p>
-                <p><span class="emphasize">Overriding</span> deals with inheriting a method from a class and rewriting it to suit the sub-class.</p>
-                <p>Recall the Dog example which inherited from Animal class. Animal had an eat() method that had a simple print statement. Well, the Dog class needs to eat() as well but would be exactly like any other Animal class.</p>
+public File(String fileName) {
+    // Do something
+}
+</code>
+</pre>
 
-                <p>Adding an Override would tell the JVM, oh that method I inherited, yeah I want to change that to this definition here.</p>
+                    <p>In the example above, the default no-argument constructor is present with no parameters at all. Another constructor takes a String for a given file name.</p>
 
-                <pre>
-                    <code>
-                        // Note the @ is an annotation symbol
-                        @Override
-                        public void eat() {
-                            System.out.println("Bark, I like bacon");
-                        }
-                    </code>
-                </pre>
-                <p>Note: The @ symbol is for a Java annotation. Annotations can be used for many things and are becoming more popular. Sufficed to say, @ is needed with Override or the JVM has no idea what you are trying to do.</p>
+                    <h4 class="subject-header">So what is Overriding?</h4>
+                    <p>Overriding is actually very different, but still deals with methods.</p>
+                    <p><span class="emphasize">Overriding</span> deals with inheriting a method from a class and rewriting it to suit the sub-class.</p>
+                    <p>Recall the Dog example which inherited from Animal class. Animal had an eat() method that had a simple print statement. Well, the Dog class needs to eat() as well but would be exactly like any other Animal class.</p>
 
-            </div> <!-- End content -->
-            <div class="empty-right"></div>
+                    <p>Adding an Override would tell the JVM, oh that method I inherited, yeah I want to change that to this definition here.</p>
+
+<pre>
+<code>
+// Note the @ is an annotation symbol
+@Override
+public void eat() {
+System.out.println("Bark, I like bacon");
+}
+</code>
+</pre>
+                    <p>Note: The @ symbol is for a Java annotation. Annotations can be used for many things and are becoming more popular. Sufficed to say, @ is needed with Override or the JVM has no idea what you are trying to do.</p>
+                </div>
+            </div>
         </div>
 
         <div class="footer"></div>
-        
     </div>
-
 </body>
 </html>
