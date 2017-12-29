@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson 7</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amiri' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style/master.css"> 
+</head>
+<body>
+    <div class="container-fluid fullpage main no-padding">
+        <div class="col-sm-2 panel-group fullpage no-padding projects-container">
+            <div class="fullpage projects">
+                <div class="projects-header">
+                    <h3>Projects</h3>
+                </div>
+                <div class="projects-list">
+                    <ul>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/charge"><li>Charge! Game</li></a>
+                        <hr />
+                        <a href="https://github.com/j-stoff/my_next_book"><li>Your Next book</li></a>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/PythonWeb"><li>Python web development</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-inverse col-sm-10">
+            <div class="container-fluid row">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="todo.html">TODO</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a class="active-link" href="lessons.html">Lessons</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="tictactoe.html">Game</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="container-fluid col-sm-10 content-main">
+            <div class="row content-container">
+                <div class="header">
+                    <h2>Lesson 7 - Polymorphism</h2>
+                </div>
+        
+                <div class="content col-sm-10">
+                    <h3 class="topic-header">Polymorphism</h3>
+                    <p>The real benefit of Object orientation is the concept of polymorphism which works through inheritance. It allows the class which inherits from the parent class to have the functionality of the parent but allows for differentiation of the subclass. In better terms, a subclass isn't just adding a parent's code to it's own, instead it can change (morph) into more than one (poly) unique class.</p>
+                    <p>This is the basic idea behind overriding though it wasn't revealed at the time. This brings us to defining code that may not be used much or even at all. In fact Java has a type of Object that can not be institated called an Abstract Object.</p>
+                    <h3 class="topic-header"> Abstract Object</h3>
+                    <h4>What is an Abstract Object do?</h4>
+                    <p>As I said above, an object declared as <span class="emphasize">abstract</span> can not have it's constructor called. What is the point of having as class like that, if the code won't be used? Well, it is in fact used. It just isn't explicitly called anywhere.</p>
+<pre>
+<code>
+public abstract class Person() {}
+</code>
+</pre>
+                    <p>The code above is how to declare a class as abstract.</p>
+                    <p>The benefit of an Abstract Object is that any inheriting classes will have the variables and/or methods already set up. It is often used generalized type that all classes have in common but doesn't make sense as a class itself.</p>
+                    <p>For example: recall the Person > Employee > ITWorker example. Going above Person doesn't make sense for our program. We could call it 'Animal' or something else, but that isn't what we need in our program. If a Animal class was made it would likely be abstract as it doesn't need functionality in the program.</p>
+                    <h4 class="subject-header">I still don't see the benefit. Isn't putting this logic in the sub-class easier?</h4>
+                    <p>If there were a direct one to one relationship, maybe. Instead, there could be several classes that inherit from this abstract class. Using the Animal > Person example above. What about adding a Dog class to this model? Or even a Cat class.</p>
+                    <p>The point is that writing abstract classes allows inheritance to be taken at full value while not worrying about how the class should behave, as quite simply it shouldn't. It should just be a location which other classes pull code from.</p>
+
+                    <h4 class="subject-header">Abstract methods</h4>
+                    <p>Abstract classes do not need to contain abstract methods but often do. An abstract method has no formal definition except the access modifier, return type, and parameters. No method body means that calling the method would do nothing which seems fairly pointless. The idea is that all abstract methods must be defined by inheriting classes.</p>
+
+                    <p>An example might be an abstract data structure in Java called List. The List class defines some basic functionality you might expect in lists: an add() method, a remove() method, a size() method to get the current side of the list. Subclasses of List inlcude ArrayList and LinkedList, so both of these classes must define add(), remove(), and size() methods. The implementation for add() and remove() is very different for an array based list versus a linked list. Side note, List is an abstract type that can be used as a variable type but not as a class declaration.</p>
+
+                    <h3 class="topic-header">Interfaces</h3>
+                    <p>Interfaces are abstract code that is meant to be specific for the class that is implementing it. Speaking of <span class="emphasize">implements</span> is the keyword that allows inheritance of an interface to a class. A class can implement many interfaces and an interface can be implemented by many classes. This is one of the real benefits to Object orientation as it allows some baseline code to be written in an interface then any other developer can write their own classes that implement the interface.</p>
+
+                    <p>Because an interface is inherently abstract, that means an interface can never be instantiated. It also means that all methods are treated as abstract and all varaibles are treated as final (they must be assigned a value that can not change).</p>
+
+                    <p>Look at this example of an interface.</p>
+<pre>
+<code>
+interface Collection {
+    int MAXIMUM_SIZE = 1000;
+
+    void add();
+    Object remove();
+}
+</code>
+</pre>
+                    <p>Notice how there are no access modifiers meaning that the default mode is being used. Generally public is declared as it allows unresticted access to these fields and methods. Interfaces can use any of the modifiers, but private would not make much sense as they woud be unusable. The exception is that in Java 9, interfaces can actually fully declare their own methods. Not just abstract methods, but that is still to come.</p>
+
+                    <h3 class="topic-header">Exercise</h3>
+                    <p>Recall our old Animal declaration, lets clean it up a bit.</p>
+                    <p>Create an Animal class that contains the following</p>
+                    <ul>
+                        <li>Abstract class(Animal class itself)</li>
+                        <li>An instance variable species that is a String</li>
+                        <li>A method called eat() that prints "Eating over here" to the console.</li>
+                        <li>An abstract method with no return value called makeNoise()</li>
+                    </ul>
+                    <p>Create a Dog class with:</p>
+                    <ul>
+                        <li>Extends from Animal</li>
+                        <li>Implements Fluffy, and EnergyLevel interfaces</li>
+                        <li>A private method called bark()</li>
+                    </ul>
+                    <p>Hint -- Abstract classes and methods must be declared.</p>
+                    <p>A Cat class</p>
+                    <ul>
+                        <li>Extends the Animal class</li>
+                        <li>Implements Fluffy and EnergyLevel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
