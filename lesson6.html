@@ -139,6 +139,25 @@ public File() {
                     <p>The JVM is smart, it figures out that if a constructor isn't declared that a no-arg constructor is assumed which will work in all cases for the class.</p>
                     <p>The downside to having a smart JVM is that if any other type of constructor is declared, that is it. That is why it is common to have a No-Arg constructor as well as other constructors that are for convience.</p>
 
+                    <h4 class="subject-header">If constructors initialize classes, how are super classes initialized?</h4>
+                    <p>The constructor for a class extending another class does not do anything to the parent's constructor unless told to do so. The way to call a parent's constructor is using the <span class="emphasize">super()</span> call. Super is a reserved keyword to indicate the parent class while in the child class. Can the class refer to itself to avoid reference mistakes? Yes, using the <span class="emphasize">this</span> keyword to refer to the current class. It is common to see super() or this() within constructors as they call either the parent's no-arg constructor or the no-arg constructor of the current class.</p>
+
+                    <p>Note: super() and this() MUST be the first line of a constructor if present. See below for an example.</p>
+<pre>
+<code>
+//No Arg constructor
+public Dog() {
+    // Default initializations
+}
+
+public Dog(String name) {
+    this();     // must be first
+    this.name = name;
+}
+</code>
+</pre>
+                    <p>In the example above, a no argument constructo does the default initializations that need to happen for the Dog class no matter the circumstances. The second constructor takes in a String parameter for a name. The no-arg constructor is called in the first line then assigning a variable within the class called 'name' to the 'name' parameter passed in.</p>
+
                     <h3 class="topic-header">Overloading and Overriding. What are they?</h3>
                     <p>I mentioned above that a class can have several types of constructors. How is that possible? How does the JVM know which constructor to use?</p>
                     <h4>The answer is Overloading</h4>
@@ -158,6 +177,8 @@ public File(String fileName) {
 
                     <p>In the example above, the default no-argument constructor is present with no parameters at all. Another constructor takes a String for a given file name.</p>
 
+
+
                     <h4 class="subject-header">So what is Overriding?</h4>
                     <p>Overriding is actually very different, but still deals with methods.</p>
                     <p><span class="emphasize">Overriding</span> deals with inheriting a method from a class and rewriting it to suit the sub-class.</p>
@@ -175,6 +196,32 @@ System.out.println("Bark, I like bacon");
 </code>
 </pre>
                     <p>Note: The @ symbol is for a Java annotation. Annotations can be used for many things and are becoming more popular. Sufficed to say, @ is needed with Override or the JVM has no idea what you are trying to do.</p>
+
+                    <h3 class="topic-header">Exercise</h3>
+                        <p>All instance variables will be declared as private from this point on.</p>
+                        <p>Create a Person class. This will serve as the base for our class hierarchy. The Person class should contain the following:</p>
+                        <ul>
+                            <li>A String field for a name</li>
+                            <li>An int for an age field</li>
+                            <li>Getter and setter methods for both name and age.</li>
+                            <li>A no argument constructor</li>
+                            <li>A constructor which takes a String and int as parameters. The String will be assigned to the name field and the int parameter assigned to the age.</li>
+                        </ul>
+                        <p>Next we have the Employee class which inherits from Person.
+                        The Employee class should include the following:</p>
+                        <ul>
+                            <li>A String called jobType</li>
+                            <li>A no-arg constructor</li>
+                            <li>A constructor that takes in a String for jobType, an int for age, and String for name.</li>
+                            <li>Getter and setter for jobType</li>
+                            <li>A method called getPaid() which uses age in order to calculate the amount. Multiple age by 100 and return this value.</li>
+                        </ul>
+                        <p>Finally we have an ITWorker class which inherits from Employee</p>
+                        <ul>
+                            <li>A String called division</li>
+                            <li>A getter and setter for division</li>
+                            <li>A constructor that takes in a String for name, int for age, String for jobType, and String for division.</li>
+                        </ul>
                 </div>
             </div>
         </div>
