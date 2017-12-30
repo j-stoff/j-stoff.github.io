@@ -1,26 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Skills Acquired</title>
-    <link rel="stylesheet" type="text/css" href="style/master.css">
+    <title>Skills</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amiri' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style/master.css"> 
 </head>
 <body>
-    <div class="grid-container">
-        <div class="navbar">
-            <ul class="navbar-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="skills.html">Skills</a></li>
-                <li><a href="todo.html">TODO</a></li>
-                <li><a href="resources.html">Resources</a></li>
-            </ul>
+    <div class="container-fluid fullpage main no-padding">
+        <div class="col-sm-2 panel-group fullpage no-padding projects-container">
+            <div class="fullpage projects">
+                <div class="projects-header">
+                    <h3>Projects</h3>
+                </div>
+                <div class="projects-list">
+                    <ul>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/charge"><li>Charge! Game</li></a>
+                        <hr />
+                        <a href="https://github.com/j-stoff/my_next_book"><li>Your Next book</li></a>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/PythonWeb"><li>Python web development</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-inverse col-sm-10">
+            <div class="container-fluid row">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a class="active-link" href="skills.html">Skills</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="todo.html">TODO</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="tictactoe.html">Game</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="content-container">
-            <div class="header">
-                <h2 class="title">Skills and Experience</h2>
-            </div>
-
-            <div class="content">
+        
+        <div class="container-fluid col-sm-10 content-main">
+            <div class="row content-container">
+                <div class="header">
+                    <h2>Knowledge and Skills</h2>
+                </div>
+        
+                <div class="content col-sm-10">
                     <h4 class="subject-title">Web Development</h4>
                         <h5 class="subject-header">MVC Model</h5>
                         <h5 class="subject-header">Back End</h4>
@@ -41,12 +82,12 @@
                                     </ul>
                                 <p class="subject-topic">HTML/CSS</p>
                         <h5 class="subject-header">Bootstrap - responsive Design</h5>
-                    <h4 class="subject-title">Unit Testing - mostly done in jUnit</h4>
+                    <h4 class="subject-title">Unit Testing</h4>
                     <h4 class="subject-title">RDBMS</h4>
                         <h5 class="subject-header">MySQL</h5>
-                        <h5 class="subject-header">Oracle - 11g</h5>
+                        <h5 class="subject-header">Oracle</h5>
                     <h4 class="subject-title">Mobile App Design</h4>
-                        <h5 class="subject-header">iOS - using Xcode 9 using Swift</h5>
+                        <h5 class="subject-header">iOS - using Swift on Xcode9</h5>
                         <h5 class="subject-header">Android</h5>
                     <h4 class="subject-title">Source Control</h4>
                         <h5 class="subject-header">Git - <a href="https://github.com/j-stoff">https://github.com/j-stoff</a></h5>
@@ -54,26 +95,21 @@
                         <h5 class="subject-header">Test Driven Development</h5>
                         <h5 class="subject-header">Iterative Development</h5>
                     <h4 class="subject-title">Networking Experience</h4>
-                        <h5 class="subject-header">Programmed simple router and switch implementations in Python</h5>
+                        <h5 class="subject-header">Created simple switch using MAC-like addressing schemes</h5>
+                        <h5 class="subject-header">Created a router that used simple ARP-Query protocol to forward networking traffic</h5>
+                        <h5 class="subject-header">Programmed a reliable transmission simulation in which packets were dropped randomly. The sliding window protocol was used to detect and resend necessary packets.</h5>
                     <h4 class="subject-title">Operating Systems knowledge</h4>
-                            <h5 class="subject-header">Linux/Unix</h5>
-                            <h5 class="subject-header">Command line knowledge</h5>
-                            <h5 class="subject-header">Writing OS code, using C and the xv6 model from MIT</h5>
-                    <h4 class="subject-title">Hardware knowledge - Moderate amount</h4>
+                            <h5 class="subject-header">Linux/Unix OS's</h5>
+                            <h5 class="subject-header">Used xv6 OS from MIT</h5>
+                            <h5 class="subject-header">Writing kernel system calls in xv6</h5>
+                            <h5 class="subject-header">Wrote an amateur shell program.</h5>
+                            <h5 class="subject-header">Dealt with user program memory management and pagingation</h5>
+                    <h4 class="subject-title">Hardware knowledge</h4>
                     <h4 class="subject-title">Amazon Web Services</h4>
                         <h5 class="subject-header">EC2 deployment/management</h5>
                         <h5 class="subject-header">Machine Learning configuration and deployment</h5>
+                </div>
             </div>
-            <div class="empty-right"></div>
-        </div>
-
-        <div class="projects">
-            <h3>Projects</h3>
-                <ul>
-                    <li><a href="https://github.com/j-stoff/charge">Charge! Game</a></li>
-                    <li><a href="https://github.com/j-stoff/my_next_book">Your Next book</a></li>
-                    <li><a href="https://github.com/j-stoff/PythonWeb">Python web development</a></li>
-                </ul>
         </div>
 
         <div class="footer"></div>
