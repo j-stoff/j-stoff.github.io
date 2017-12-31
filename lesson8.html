@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson 8</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amiri' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style/master.css"> 
+</head>
+<body>
+    <div class="container-fluid fullpage main no-padding">
+        <div class="col-sm-2 panel-group fullpage no-padding projects-container">
+            <div class="fullpage projects">
+                <div class="projects-header">
+                    <h3>Projects</h3>
+                </div>
+                <div class="projects-list">
+                    <ul>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/charge"><li>Charge! Game</li></a>
+                        <hr />
+                        <a href="https://github.com/j-stoff/my_next_book"><li>Your Next book</li></a>
+                        <hr/>
+                        <a href="https://github.com/j-stoff/PythonWeb"><li>Python web development</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-inverse col-sm-10">
+            <div class="container-fluid row">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="todo.html">TODO</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a class="active-link" href="lessons.html">Lessons</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="tictactoe.html">Game</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="container-fluid col-sm-10 content-main">
+            <div class="row content-container">
+                <div class="header">
+                    <h2>Lesson 8 - Error Handling</h2>
+                </div>
+        
+                <div class="content col-sm-10">
+                    <!-- Content begins -->
+                    <h3 class="topic-header">Something bad happened</h3>
+                    <p>Perhaps you have already seen an Exception or Error message when compiling or executing a program. A message that the program went awry have been around a very long time. Java has a unique way of dealing with them that has become quite popular.</p>
+
+                    <p>First, take a look at the types of two types of errors a program can run into.</p>
+
+                    <h3 class="topic-header">Error types</h3>
+                    <p>Within Java there are two sorts of problems that can happen when executing a program, Errors and Exceptions. Errors are a sign that the program has really gone off the rails and in most cases letting the program die is best course of action.</p>
+
+                    <p>The other problem flag is called an Exception. Exceptions can be handled within the program and allow for continued execution. For example, a common Exception is the NullPointerException. To give a little background, null is a spot in memory that the JVM knows to mean nothing. That sounds slightly confusing, but thinking about it as <i>one</i> spot means that nothing is assigned to this variable, that means any other value is a location within memory. That is what null is, and a pointer is another word for 'reference' as in an Object reference. This Exception occurs when a variable is trying to be used but has not been instantiated yet.</p>
+<pre>
+<code>
+public class TestClass {
+    private ArrayList list;
+
+    public void printList() {
+        for (int index = 0; index < list.size(); index += 1) {
+            System.out.println(list.get(index));
+    }
+}
+</code>
+</pre>
+                    <p>Above is code that would run into a NullPointerException when the printList() method is called. Because a constructor was not defined, Java assumes a No-arg constructor. The <span class="emphasize">list</span> variable was never instantiated, thus it still points to null.</p>
+
+                    <p>Note: this is one reason why explicitly declaring a no-arg constructor as well as any other constructor is often preferred. Also, I know I didn't cover data structures yet, but most are just classes with cool methods.</p>
+                    <h4 class="subject-header">So thats what Exceptions are, but how do I deal with them?</h4>
+
+                    <h3 class="topic-header">Try/Catch blocks</h3>
+                    <p>In Java, a try block is a section of code, similar to an if statement, that executes. The difference between a try and if, is that no condition is being evaluated for a try clause. However, that does not guarantee that all of the code will run. Indeed, Java will <span class="emphasize">try</span> to run the code. If an Exception is reached it may be handled.</p>
+
+                    <p>This brings us to a catch block which appears below a try clause. A catch() will catch Exceptions thrown to it within the try block. Within a catch's parenthesis is the type of Exception to be caught and the variable name to use. Note, a parent of the Exception can be caught and any sub-classed children will be caught as well. For example, catch(Exception exception) will catch any Exception class that extends from the Exception class, so quite a few of them.</p>
+<pre>
+<code>
+try {
+    // Some potentially unstable code.
+} catch (Exception exception) {
+    exception.printStackTrace();
+}
+</code>
+</pre>
+                    <p>The above is a simple example that will execute code in a try block and if any exceptions are thrown they will be dealt with if it can be caught. Also, all exceptions have a printStackTrace() method that prints the Exception being handled yet allows the program to proceed past the exception.</p>
+
+                    <h3 class="topic-header">Try/Catch Execution</h3>
+                    <p>Try and catch blocks do not proceed with a top to bottom execution when an Exception is thrown.</p>
+
+                    <p>Consider the following bit of code:</p>
+<pre>
+<code>
+try {
+    FileReader reader = new FileReader("myfile.txxt"); // line 1
+    reader.read();      // line 2
+} catch (FileNotFoundException fnfe) {
+    System.out.println("File wasn't found");  // line 3
+}
+</code>
+</pre>
+                    <p>In the example above, when looking for a 'myfile.txt' a FileNotFoundException would be thrown as the file name given as a String was 'myfile.txxt' (yes I did that on purpose). The execution of line one would occur and is where the FileNotFoundException would be thrown from. The JVM switches to catching mode and looks within the catches to see if the Exception can be caught there. If not, the JVM would exit the method and go farther up the call stack to find a place where it would be caught. If it is caught nowhere in the program, it will be caught outside of the main() method that was called which will result in ending of the program.</p>
+
+                    <p>Note: when the FileNotFoundException is thrown, line 2 is not executed. Even if the JVM sees the catch clause for the Exception that was thrown, it does not continue execution within the try clause. It is assumed that any code within the try block would rely upon the preceeding code. That makes sense because if the JVM went back to execute line 2 after line 3, it would result in a NullPointerException as the FileReader class was not properly instantitated.</p>
+
+                    <h4 class="subject-header">Runtime Exceptions</h4>
+                    <p>Runtime Exceptions are 'unchecked' Exceptions when compiling on the JVM as these Exceptions occur at run time. The best known is probably the NullPointerException. It is possible to deal with Runtime exceptions but it is not required and is often not done during testing (these end up showing where the code breaks).</p>
+
+                    <h3 class="topic-header">Throwing Exceptions</h3>
+                    <p>Throughout this entire section I have avoided explaining what I mean by <span class="emphasize">throws</span> an exception. When compiling Java and an Exception can occur that is not dealt with, the JVM will give up compiling and report that there are unhandled Exceptions. Rightly so as there are methods that don't properly catch Exceptions which would allow them to proceed to the top of the stack and end the program.</p>
+
+                    <p>Thus it is that Exceptions need to be handled regardless of whether they are generated by code you wrote or not. If the methods called from other libraries or sources generate Exceptions within the code, it is up to you to deal with them.</p>
+
+                    <p>This is where throws comes into play. Throws is another keyword that can be put on a method which says 'I know an Exception can be generated using this code, but I don't want to catch it here'. So the Exception is 'thrown' up the call stack to the method that originally called this method and checks if it can be deal with it. This must happen all the way until the Exception is caught.</p>
+<pre>
+<code>
+public void myMethod() throws Exception {
+    // Any exceptions will be tossed up the stack and not dealt with
+}
+</code>
+</pre>
+                    <h4 class="subject-header">Why wouldn't you just deal with the exception when it occurs?</h4>
+                    <p>That has to do with the purpose of the code. For instance, most programs written are specific to the user they were written for. Mostly ourselves writing small programs that are convenient or for fun. That means from start to finish the program has a clear purpose of what it should accomplish and excels in that small area.</p>
+                    <p>Other code is written for developers to use. For example the Java API used to print statements using the System Object. Good code is written for many different uses. Excellent code is written for any situation. To write code for any situation while still keeping in mind how Java works, rules must be followed. That includes Exception handling which can throw errors for each developer's unique case to be handled.</p>
+
+                    <h3 class="topic-header">Finally clause</h3>
+                    <p>In addition to the try/catch blocks, there can additionally be a <span class="emphasize">finally</span> block which runs in both try or catch modes. It is mainly used for closing some code, for example a connection to a database should be closed when the code is done no matter if an exception was caught or not.</p>
+<pre>
+<code>
+try {
+    // Exception throwing code
+} catch (Exception exception) {
+    // Handling here
+} finally {
+    // This runs no matter what
+}
+</code>
+</pre>
+                    <h4 class="subject-header">Good news. Finally isn't needed when using try with resources.</h4>
+                    <p>What is a try-with-resources? A try block with a parenthesis that runs Auto. For example, the connection example I brought up earlier is well known and since programmers were tired of writing finally close() which can fail itself so it requires it's own try/catch block in the rare event a close() method fails.</p>
+
+                    <p>A try-with-resources skips all of that because it will use the AutoCloseable code to close the connection. Only code that implements AutoCloseable can be used in try-with-resources.</p>
+<pre>
+<code>
+try (// AutoCloseable Stuff here) {
+    // Normal exception code
+} catch (Exception exception) {
+    // Exception handling
+}
+</code>
+</pre>
+                    <p>It is usually a good idea to include a finally block, but is not needed.</p>
+
+                    <h4 class="subject-header">No Exercise for this Lesson. Instead the next Exercise will use exception handling.</h4>
+                    <!-- Content ends -->
+                </div>
+            </div>
+        </div>
+
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

@@ -10,10 +10,6 @@ html, body {
 body {
     margin: 0;
     font-family: sans-serif;
-    /*
-    background-color: #0e072c;
-    color: white;
-    */
 }
 
 code {
@@ -167,6 +163,7 @@ ul {
 
 .navbar {
     background-color: #712941;
+    border-radius: 0;
 }
 
 .navbar-inverse .navbar-nav > li > a {

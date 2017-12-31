@@ -50,6 +50,8 @@
                     <li><a class="active-link" href="lessons.html">Lessons</a></li>
                     <li class="navbar-separator">/</li>
                     <li><a href="tictactoe.html">Game</a></li>
+                    <li class="navbar-separator">/</li>
+                    <li><a href="about.html">About</a></li>                    
                 </ul>
             </div>
         </div>
@@ -75,7 +77,7 @@ public abstract class Person() {}
 </pre>
                     <p>The code above is how to declare a class as abstract.</p>
                     <p>The benefit of an Abstract Object is that any inheriting classes will have the variables and/or methods already set up. It is often used generalized type that all classes have in common but doesn't make sense as a class itself.</p>
-                    <p>For example: recall the Person > Employee > ITWorker example. Going above Person doesn't make sense for our program. We could call it 'Animal' or something else, but that isn't what we need in our program. If a Animal class was made it would likely be abstract as it doesn't need functionality in the program.</p>
+                    <p>For example: recall the Person > Employee > ITWorker exercise. Going above Person doesn't make sense for our program. We could call it 'Animal' or something else, but that isn't what we need in our program. If a Animal class was made it would likely be abstract as it doesn't need functionality in the program.</p>
                     <h4 class="subject-header">I still don't see the benefit. Isn't putting this logic in the sub-class easier?</h4>
                     <p>If there were a direct one to one relationship, maybe. Instead, there could be several classes that inherit from this abstract class. Using the Animal > Person example above. What about adding a Dog class to this model? Or even a Cat class.</p>
                     <p>The point is that writing abstract classes allows inheritance to be taken at full value while not worrying about how the class should behave, as quite simply it shouldn't. It should just be a location which other classes pull code from.</p>
@@ -93,6 +95,7 @@ public abstract class Person() {}
                     <p>Look at this example of an interface.</p>
 <pre>
 <code>
+// Example I found online
 interface Collection {
     int MAXIMUM_SIZE = 1000;
 
@@ -101,7 +104,7 @@ interface Collection {
 }
 </code>
 </pre>
-                    <p>Notice how there are no access modifiers meaning that the default mode is being used. Generally public is declared as it allows unresticted access to these fields and methods. Interfaces can use any of the modifiers, but private would not make much sense as they woud be unusable. The exception is that in Java 9, interfaces can actually fully declare their own methods. Not just abstract methods, but that is still to come.</p>
+                    <p>Notice how there are no access modifiers meaning that the default mode is being used. Generally public is declared as it allows unresticted access to these fields and methods. Interfaces can use any of the modifiers, but private would not make much sense as they woud be unusable. As of Java 8 interfaces can have default methods that can be called like a normal method call. Java 9 adds private methods as sort of helper funcitons within interfaces.</p>
 
                     <h3 class="topic-header">Exercise</h3>
                     <p>Recall our old Animal declaration, lets clean it up a bit.</p>
