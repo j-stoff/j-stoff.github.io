@@ -65,42 +65,72 @@
                 </div>
         
                 <div class="content col-sm-10">
-                <h4>First off, pick a text editor. Some ideas below.</h4>
+                <h4 class="topic-header">Choose your tools</h4>
+                    <p>Some common text editors are listed below. They aren't the only option, but I strongly suggest against using an IDE(integrated development environment like IntelliJ and Eclipse) at this stage.</p>
                         <ul>
                             <li>Sublime Text 3</li>
                             <li>Atom</li>
-                            <li>Textmate</li>
+                            <li>Textmate (mac users)</li>
                             <li>Notepad++</li>
                         </ul>
 
-                    <h4>Some terminology</h4>
+                    <h3 class="subject-header">Some terminology</h3>
                         <p><b>Object</b></p>
                             <p>An object is simply a container for variables and methods. Every class inherits from the Object type (more on inheritance later).</p>
                         <p><b>Class</b></p>
-                            <p>A class is a type of <i>object</i> but Java recognizes code at the class level, not at the object level. Almost every bit of code in Java is within a class. Similar to how C requires a 'int main' function to run the code, Java uses classes as the backbone to run code.</p>
+                            <p>A class is a type of <i>object</i> that Java recognizes when compiling and executing code, not at the object level. Almost every bit of code in Java is within a class. Similar to C using function calls, Java uses classes as the simplest level of abstraction.</p>
                         <p><b>Method</b></p>
-                            <p>A method is a function within a class. Typically this gives the class some functionality, so for example, a BufferedReader Class contains methods that would be useful for reading a file's contents such as readLine() which reads one line of the file and advances file pointer.</p>
+                            <p>A method is a function within a class. By function I mean that there is code to be executed when called. The method is found by referencing the method name within the Object's scope. In Exercise 1 below, println() is a method of the System Object.</p>
                         <p><b>Instance variable</b></p>
-                            <p>Similar to 'properties' in other languages, they comprise local variables within a class that are required for a class to operate. Going on with the BufferedReader class example, a useful instance variable would be a String containing the name of the file.</p>
+                            <p>Also called fields or properties in other languages, they comprise variables that are used within the scope of the class.
+                            When writing a Person class, a String field that contains the name of the Person being stored would be useful.</p>
+
+                    <h3 class="subject-header">Install the JDK</h3>
+                    <p>To just execute Java you need the Runtime Environment which is on the majority of machines. We want to write and execute our Java code. Luckily Java is free and the JDK (Java Development Kit) is readily available.</p>
+
+                    <p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"></a>Java 8 JDK link</p>
+
+                    <p>When downloading make sure to get the correct verision (32 bit or 64 bit) for your particular machine. To check bring up the command line for your machine.</p>
+                    <p>For windows users, navigate to the control panel. In the control panel, go to the System icon. Within System, under the general tab, will display the operating system information including the bit type.</p>
+
+                    <p>For Mac users, open the Terminal. The Terminal program default location is within Finder > Applications > Utilities > Terminal. Type "uname -m" without quotes. x86_64 is 64 bit, i686 is 32 bit.</p>
+
+                    <p>Linux based users, open the command line. Type "uname -m" without quotes. x86_64 is 64 bit, i686 is 32 bit.</p>
+
+                    <p>Once the download is complete, open the file to run the executable which will install the SDK on your machine.</p>
+
+                    <h4 class="subject-header">If not already open, bring up the command line.</h4>
+                        <p>There will be some reliance on the command line over using the UI based file systems (such as Windows Explorer). So it best to start learning now.</p>
+
+                    <h4 class="subject-header">Bringing up the command line</h4>
+                        <p>For windows, search for "cmd" in the Start Menu.</p>
+                        <p>For Mac, see above in the SDK installation.</p>
+                        <p>For Linux, you probably know where the command line is already.</p>
+                        <p>Once open, navigate to a desired work directory. This is done using the 'cd' command which stands for Change Directory. Directory is another name for a folder. This command works on Windows, Mac, and Linux.</p>
+
+                        <p>When at the desired location, create a directory with 'mkdir' for Linux/Mac users or 'md' for Windows.</p>
 
 
-                    <h4>Now, open a command prompt up as this will be the simplest way to confingure Java code.</h4>
-                        <p>Once open, navigate to a desired work directory.</p>
-
-
-                    <h4>Project Structure</h4>
+                    <h4 class="subject-header">Project Structure</h4>
                         <p>Setting up a project structure is critical for managing files, dependencies, and an overall good practice.</p>
-                        <p>For the moment, just create a main folder that will house everything.</p>
-                        <p>Within that folder, create another folder for Lesson One.</p>
+                        <p>For the moment, just create a centralized folder that will house everything. Name it well, like Java_Intro.</p>
+                        <p>Within that directory, create another directory for Lesson One.</p>
 
-                    <h4>Next, check which version of java is currently installed on the machine.</h4>
+                    <h4 class="subject-header">Next, check which version of java is currently installed on the machine.</h4>
                         <p>Note: The easiest way to find the most recent running version is in a command prompt using the command <span class="emphasize">java -version</span> (others may be installed but whichever is currently being used will run)</p>
                         <p>1.X where X gives the current Java version (This will change in Java 9 which is just being referred to as Java 9, not 1.9).</p>
+                        <p>If the java -version command returns "openjdk version 1.x" where x is the SDK version you installed.</p>
+                        <p>If not, and more likely "Java Runtime Environment" will appear. This means that Java still considers only executing programs, not compiling them as well.</p>
 
-                    <h4>Next, download <a href="java/HelloWorld.java" download>this</a></h4>
+                    <h4 class="subject-header">Changing the PATH variable</h4>
+                    <p>If the 'openjdk' message was displayed then skip this section.</p>
+                    <p>If not, the best way is to google how to set your PATH variable for the particular Operating System you are on.</p>
 
-                    <h4>Compiling and running the code</h4>
-                        <p>At the command line, type 'javac Hello' and press tab to auto-complete the HelloWorld.java file. This will compile the code into HelloWorld.class file.</p>
+                    <h4 class="subject-header">Next, download <a href="java/StubCode/LessonOne/HelloWorld.java" download>this</a></h4>
+                    <p>Place the HelloWorld.java into the Lesson 1 folder.</p>
+
+                    <h4 class="subject-header">Compiling and running the code</h4>
+                        <p>At the command line, navigate to the Lesson 1 folder. Type 'javac Hello' and press tab to auto-complete the HelloWorld.java file. This will compile the code into HelloWorld.class file.</p>
                         <p>Run the code with 'java Hello' and again tab to complete the proper sequence. Note you do not need to add 'HelloWorld.class' as the computer will know that 'HelloWorld' is executable.</p>
 
                     <h4>Note at the console in the next line, "Hello World!" should be printed as the program ran successfully or a compilation error happened.</h4>

@@ -65,14 +65,23 @@
         
                 <div class="content col-sm-10">
                     <h3 class="topic-header">Object orientation: A big deal</h3>
-                    <p>I swear its getting hard coming up with good titles.</p>
                     <p>Object orientation is the heart of programming with most modern languages. It isn't required by some, but is helpful nonetheless.</p>
                     <p>Why is it helpful? Code reusability. That's it in a nutshell. One class definition can detail everything several functions could do but keeps the code nice and neat.</p>
                     <p>Recall the definition I gave for Objects. Containers for code, and that is exactly what they are. Useful things to store (varaibles), and useful functions (methods).</p>
 
                     <h4 class="subject-header">Why do I care? Because of Inheritance and Polymorphism</h4>
+
+                    <h4 class="subject-header">Terminology</h4>
+                    <p><b>Inheritance</b></p>
+                    <p>When a class derives code from another source through a keyword. The regular form of inheritance uses the 'extends' keyword.</p>
+                    <p><b>Super class</b></p>
+                    <p>The parent class which has some useful code.</p>
+                    <p><b>Sub class</b></p>
+                    <p>The class that wants to make use of a parent class's code. Uses the extend keyword to refer to the parent class.</p>
+                    <p><b>Instantiate</b></p>
+                    <p>A fancy way of saying "create a new object". If an Object has not been instantiated it holds the 'null' value.</p>
                     <h4 class="subject-header">We will start with Inheritance</h4>
-                    <p>So if the heart of Object orientation is code re-usability, can we use classes we've already written. <span class="emphasize">Yes.</span></p>
+                    <p>So if the heart of Object orientation is code re-usability, can we use classes we've already written? <span class="emphasize">Yes.</span></p>
 <pre>
 <code>
 public class Person {
@@ -103,22 +112,22 @@ public class Employee extends Person {
 </code>
 </pre>
                     <p>The implications are as you might expect. An Employee reference type can use all the employee fields (the id) and methods (startShift). But it can also use those from the Person class. The reverse is not true. A Person class cannot call startShift() as the Person class knows nothing about Employee. It only the Employee that knows about the Person reference.</p>
-                    <p>Also a note: There can only be <i>one</i> super class to inherit from. There is a way to use code from multiple sources - it's polymorphism we will get to later.</p>
+                    <p>Also a note: There can only be <i>one</i> super class to inherit from. There is a way to use code from multiple sources - those are called Interfaces which are in Lesson 7.</p>
 
                 <h4 class="subject-header">Simple test</h4>
-                    <p>Often it is easy enough to say I want this class to have the same methods/code as this other class. The issue becomes, should it?</p>
+                    <p>Often it is easy enough to say I want this class to have the same methods/code as this other class. The issue then becomes, should it?</p>
                     <p>Logical design in class structure is more art than actual design. It takes time and practice for what classes should be used and how the hierarchy should be structured.</p>
                     <p>That said, there is a logical test to do that works quite well. The IS-A test, which is very simple itself. If the inheriting class name (sub-class) 'Is A' superclass name. If the statement makes sense, it passes the test.</p>
                     <p>Example: An Employee is a Person. A Person isn't always an Employee.</p>
                     <p>There is also another simple test to determine if the relationship should be through a variable (reference to the object). The HAS-A test is similar to IS-A, but if the class in question 'has a' other class name, it fulfills the has-a test.</p>
-                    <p>Example: An Employee class has a Job Class. The Job class doesn't extend from the Employee class, as a Job IS-AN Employee wouldn't make sense.</p>
+                    <p>Example: An Employee class has a Job Class. The Job class doesn't extend from the Employee class, as a Job IS-A Employee wouldn't make sense.</p>
 
                  <h4 class="subject-header">But we work with classes, what's all the talk about Objects.</h4>
-                    <p>Well, recall that I said the Object in Java is the base level from which everything is bult? That means every class EXTENDS from object though it doesn't need to declare it. That means any Object methods are usable by any class (mainly the .equals() and .toString())</p>
+                    <p>Well, recall that I said the Object in Java is the base level from which everything is bult? That means every class EXTENDS from object though it doesn't need to declare it. That means any Object methods are usable by any class. The big methods are the .equals when comparing two Object references and the toString() method for printing the Object to the console.</p>
 
                 <h4 class="subject-header">How large can be hierarchy of super and sub classes be?</h4>
-                    <p>As long as you want. Though there is a better way, polymorphism, to reuse some common code that doesn't require extremely long chains of inheritance.</p>
-                    <p>In truth, inheritance is pretty cool, but it's become the less useful feature of Object Orientation. Designing through Interfaces, or generically in any language as polymorphism, is the real benefit.</p>
+                    <p>As long as you want. Though there is a better way, designing through interfaces, to reuse some common code that doesn't require extremely long chains of inheritance.</p>
+                    <p>In truth, inheritance is pretty cool, but it's become the less useful feature of Object Orientation. Designing through Interfaces is the real benefit.</p>
 
                 <p>Side note: It is possible to compile multiple .java files by using</p>
 <pre><code>
@@ -127,8 +136,17 @@ javac *.java
                 <p>Which will compile all .java files in the current directory and along the java classpath.</p>
 
                 <h3 class="topic-header">Exercise</h3>
-                    <p>Create an Animal class that has a String called speciesType and an eat() method that prints to the console the String "Eating over here".</p>
-                    <p>Create another class called Dog that subclasses Animal.</p>
+                    <p>Create an Animal class that has the following:</p>
+                    <ul>
+                        <li>A String instance variable speciesType</li>
+                        <li>A method eat() that prints "Eating over here"</li>
+                    </ul>
+                    <p>Create another class called Dog with the following:</p>
+                    <ul>
+                        <li>Extends the Animal class</li>
+                        <li>A String instance variable called name</li>
+                        <li>A method called bark() that prints "Bark!" to the console.</li>
+                    </ul>
                     <p>Additionally, the Dog class have a String for a name and a method called bark() which prints "Bark!" to the console.</p>
                     <p>Create a runner class that instantitates (makes a class) of Animal class and another one for a Dog class.</p>
                     <ul>

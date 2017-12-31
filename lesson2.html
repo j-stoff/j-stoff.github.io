@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lesson</title>
+    <title>Lesson 2</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,11 +60,11 @@
         <div class="container-fluid col-sm-10 content-main">
             <div class="row content-container">
                 <div class="header">
-                    <h2>Lesson 2 - The First Program</h2>
+                    <h2>Lesson 2 - Variables</h2>
                 </div>
         
                 <div class="content col-sm-10">
-                    <h4>Taking a look at the HelloWorld.java in a text editor, some of the words should seem familiar.</h4>
+                    <h4>Taking a look at the HelloWorld.java in a text editor, some of the words should seem familiar. For example, public and class are certainly easy to understand but have a very specific meaning in Java. Such words are called <span class="emphasize">keywords</span>. Keywords can not be used as names for variables, methods, or classes as these words are used by the compiler to indicate different things during compilation.</h4>
 <pre>
 <code>
 public class HelloWorld {}
@@ -83,7 +83,8 @@ public static void main(String args[]) {}
 System.out.println();
 </code>
 </pre>
-                    <p>Analyzing the last portion, the meaning is that there is a System object that Java knows about, it has a field called out for standard output (the .out), and a method called 'println' which can take almost any arguement and print it to the console <i>with</i> a carriage return and new line feed.</p>
+                    <p>Analyzing the last portion, the meaning is that there is a System Object that Java knows about, it has a field called out for standard output (the .out), and a method called 'println' which can take almost any arguement and print it to the console <i>with</i> a carriage return and new line feed.</p>
+                    <p>This is one of the most important debugging tools to come across, though make sure to take it out when finalizing the code.</p>
                     <p>Also important to note, Java is based on C meaning each line ends with a semi-colon or curly brace. NO EXCEPTIONS.</p>
 
                     <h4>After running the HelloWorld program, compiling and running code is that simple.</h4>
@@ -113,12 +114,12 @@ System.out.println();
 
                     <p>The list of common operators in Java:</p>
                     <ul>
-                        <li><pre><code>=   is the operator for assignment</code><pre></li>
+                        <li><pre><code>=   is the operator for assignment</code></pre></li>
                         <li><pre><code>+   is for mathematical addition or string concatenation</code></pre></li>
-                        <li><pre><code>-   is for subtraction</code><pre></li>
-                        <li><pre><code>*   is for multiplication</code><pre></li>
-                        <li><pre><code>/   is for division</code><pre></li>
-                        <li><pre><code>%   is the modulus which returns the remainder</code><pre></li>
+                        <li><pre><code>-   is for subtraction</code></pre></li>
+                        <li><pre><code>*   is for multiplication</code></pre></li>
+                        <li><pre><code>/   is for division</code></pre></li>
+                        <li><pre><code>%   is the modulus which returns the remainder</code></pre></li>
                         <li><pre><code>.   is for accessing the object</code></pre></li>
                     </ul>
 
@@ -154,11 +155,33 @@ System.out.println();
                     <p>It is a good idea to explicitly initialize variables in order to avoid silly mistakes.</p>
                     <p>Side note, when using numbers, typically only use integers and doubles. Floats, longs, and shorts have specific use cases for memory preformance but the difference between a 32 bit float versus a 64 bit double is not much. Changing a bunch of code from a float to a double would be.</p>
 
-                    <h4>Assignment</h4>
-                    <p>Declare 4 variables. Use <a href="java/LessonTwo.java" download>this</a></p>
-                    <p>Two integers called numberOne and numberTwo</p>
-                    <p>A boolean value set to false</p>
-                    <p>Finally, a String initialized with your name (eg: String name = "Bob")</p>
+                    <h3 class="topic-header">Strings</h3>
+                    <p>Strings are Object references in Java but are quite unique. In many ways Strings are treated like primitives in Java but they are not.</p>
+                    <p>Take a look at how to assign a String below.</p>
+<pre>
+<code>
+String name = "Bob";
+</code>
+</pre>
+
+                    <p>This creates a new String Object with the value "Bob" in it.</p>
+
+                    <h4 class="subject-header">String Concatenation</h4>
+                    <p>String concatenation is the combination of two String Objects into one. For example, say you wanted to concatenate your fist and last names together.</p>
+<pre>
+<code>
+String firstName = "Bob";
+String lastName = "Goodname";
+String fullName = firstName + lastName;
+</code>
+</pre>
+                    <p>The value in the fullName variable is "BobGoodname" as the Strings have been mashed together. Note that the result isn't very readable to humans which is why use spaces, tabs, or commas to separate string values before outputting them.</p>
+                    <h3 class="topic-header">Exercise</h3>
+                    <p><a href="java/StubCode/LessonTwo/LessonTwo.java" download>Use this stub code.</a></p>
+                    <p>Declare 4 variables in the main method.</p>
+                    <p>Two integers called numberOne and numberTwo. Assign them 1 and 2 respectively.</p>
+                    <p>A boolean variable set to false.</p>
+                    <p>Finally, a String initialized with your name (eg: String name = "Bob";)</p>
 
                     <p>With your variables, called three print statements.</p>
                     <p>The first, call numberOne > numberTwo as a parameter</p>
