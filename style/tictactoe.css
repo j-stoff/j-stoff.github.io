@@ -1,0 +1,196 @@
+.box1 {
+    grid-area: box1;
+    border-right: 5px black solid;
+    border-bottom: 5px black solid;
+}
+
+.box2 {
+    grid-area: box2;
+    border-bottom: 5px black solid;
+}
+
+.box3 {
+    grid-area: box3;
+    border-left: 5px black solid;
+    border-bottom: 5px black solid;
+}
+
+.box4 {
+    grid-area: box4;
+    border-right: 5px black solid;
+}
+
+.box5 {
+    grid-area: box5;
+}
+
+.box6 {
+    grid-area: box6;
+    border-left: 5px black solid;
+}
+
+.box7 {
+    grid-area: box7;
+    border-top: 5px black solid;
+    border-right: 5px black solid;
+}
+
+.box8 {
+    grid-area: box8;
+    border-top: 5px black solid;
+}
+
+.box9 {
+    grid-area: box9;
+    border-left: 5px black solid;
+    border-top: 5px black solid;
+}
+
+.gameContainer {
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-areas:
+        'box1 box2 box3'
+        'box4 box5 box6'
+        'box7 box8 box9';
+    margin: auto;
+    
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    grid-area: game;
+}
+
+.topRow {
+    margin: 10px;
+}
+
+.reset {
+    grid-area: reset;
+    margin: auto;
+}
+
+.controls {
+    grid-area: controls;
+    margin: auto;
+}
+
+.instructions {
+    grid-area: instructions;
+    margin: auto;
+}
+
+.instructions-wrapper {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+.instructions-wrapper-win {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.playerSide {
+    grid-area: playerSide;
+    margin: auto;
+}
+
+.game {
+    display: grid;
+    margin: auto;
+    grid-template-areas:
+        'reset controls instructions playerSide'
+        'game game game game'
+        'footer footer footer footer';
+    width: 50%;
+    grid-column-gap: 20px;
+}
+
+.font-md {
+    font-size: 19px;
+}
+
+.font-lg {
+    font-size: 22px;
+}
+
+.reset-sm {
+    height: 30px;
+    width: 70px;    
+}
+
+.reset-md {
+    height: 35px;
+    width: 130px;
+}
+
+.reset-lg {
+    height: 40px;
+    width: 200px;
+}
+
+.controls-sm {
+    height: 30px;
+    width: 130px;
+}
+
+.controls-md {
+    height: 35px;
+    width: 200px;
+}
+
+.controls-lg {
+    height: 40px;
+    width: 200px;
+}
+
+.xChoice-sm {
+    background-image: url("../images/x-img.png");
+}
+
+.xChoice-md {
+    background-image: url("../images/x-img-md.png");
+}
+
+.xChoice-lg {
+    background-image: url("../images/x-img-lg.png");
+}
+
+.oChoice-sm {
+    background-image: url("../images/o-img.png");
+}
+
+.oChoice-md {
+    background-image: url("../images/o-img-md.png");
+}
+
+.oChoice-lg {
+    background-image: url("../images/o-img-lg.png");
+}
+
+.xWin-sm {
+    background-image: url("../images/x-win.png");
+}
+
+.xWin-md {
+    background-image: url("../images/x-win-md.png");
+}
+
+.xWin-lg {
+    background-image: url("../images/x-win-lg.png");
+}
+
+.oWin-sm {
+    background-image: url("../images/o-win.png");
+}
+
+.oWin-md {
+    background-image: url("../images/o-win-md.png");
+}
+
+.oWin-lg {
+    background-image: url("../images/o-win-lg.png");
+}
