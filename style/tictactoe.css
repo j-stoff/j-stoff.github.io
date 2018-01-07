@@ -147,49 +147,49 @@
 }
 
 .xChoice-sm {
-    background-image: url("images/x-img.png");
+    background-image: url("../images/x-img.png");
 }
 
 .xChoice-md {
-    background-image: url("images/x-img-md.png");
+    background-image: url("../images/x-img-md.png");
 }
 
 .xChoice-lg {
-    background-image: url("images/x-img-lg.png");
+    background-image: url("../images/x-img-lg.png");
 }
 
 .oChoice-sm {
-    background-image: url("images/o-img.png");
+    background-image: url("../images/o-img.png");
 }
 
 .oChoice-md {
-    background-image: url("images/o-img-md.png");
+    background-image: url("../images/o-img-md.png");
 }
 
 .oChoice-lg {
-    background-image: url("images/o-img-lg.png");
+    background-image: url("../images/o-img-lg.png");
 }
 
 .xWin-sm {
-    background-image: url("images/x-win.png");
+    background-image: url("../images/x-win.png");
 }
 
 .xWin-md {
-    background-image: url("images/x-win-md.png");
+    background-image: url("../images/x-win-md.png");
 }
 
 .xWin-lg {
-    background-image: url("images/x-win-lg.png");
+    background-image: url("../images/x-win-lg.png");
 }
 
 .oWin-sm {
-    background-image: url("images/o-win.png");
+    background-image: url("../images/o-win.png");
 }
 
 .oWin-md {
-    background-image: url("images/o-win-md.png");
+    background-image: url("../images/o-win-md.png");
 }
 
 .oWin-lg {
-    background-image: url("images/o-win-lg.png");
+    background-image: url("../images/o-win-lg.png");
 }
