@@ -1,5 +1,5 @@
+
 html, body {
-    height: 100%;
     -ms-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -13,26 +13,36 @@ body {
     padding: 30px;
 }
 
-.page {
-    height: 1100px;
+.work-details {
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+
+.wrapper {
+    height: 100%;
+    margin: auto;
+    max-width: 960px;
+    position: relative;
 }
 
 .content {
     background-color: #f7fffe;
     height: 100%;
-    padding: 60px;
-    padding-right: 150px;
+    padding: 60px 300px 60px 60px;
 }
 
 .sidebar {
     background-color: #7bc2d3;
     height: 100%;
-    float: none;
+    float: right;
+    position: absolute;
+    right: 0;
+    width: 240px;
 }
 
 .profile-pic {
     background-color: #42A8C0;
-    height: 300px;
     padding: 30px;
     text-align: center;
 }
@@ -50,6 +60,7 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     color: white;
+    height: 100%;
 }
 
 .picture {
@@ -61,13 +72,28 @@ body {
     border-radius: 100%;
 }
 
+
+.work-item-header {
+    float: left;
+    margin: 0;
+}
+
+.date {
+    float: right;
+    margin: 0;
+}
+
+.content-item {
+    margin-bottom: 30px;
+}
+
 .item {
     margin-bottom: 15px;
 }
 
 .header {
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .section {
@@ -78,8 +104,4 @@ body {
     .sidebar {
         float: right;
     }
-}
-
-.full {
-    max-width: 960px;
 }

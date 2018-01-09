@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Cover Letter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -12,70 +14,123 @@
     <link rel="stylesheet" type="text/css" href="style/coverletter.css">
 </head>
 <body>
-    <div class="container full">
-        <div class="row page">
-            <div class="sidebar col-md-3">
-                <div class="row">
+        
+            <div class="wrapper full">
+                <div class="sidebar">
                     <div class="profile-pic">
                         <div class="picture"></div>
                         <h3 class="profile-name">Jacob Stoffregen</h3>
                         <h5 class="profile-job">Application Developer</h5>
                     </div>
+                    <div class="profile-info">
+                        <!-- TODO add icons -->
+                        <p class="item">#jacob.stoffregen@gmail.com</p>
+                        <p class="item">920-475-5261</p>
+                        <p class="item">github.com/j-stoff</p>
+                        <p class="item">j-stoff.github.io/</p>
+                    </div>
                 </div>
-                <div class="profile-info">
-                    <!-- TODO add icons -->
-                    <p class="item">#jacob.stoffregen@gmail.com</p>
-                    <p class="item">920-475-5261</p>
-                    <p class="item">github.com/j-stoff</p>
-                    <p class="item">j-stoff.github.io/</p>
+                <div class="content">
+                    <div class="section">
+                        <div>
+                            <!-- TODO image -->
+                            <h2 class="header">Career</h2>
+                        </div>
+                        <div class="profile text">
+                            <p>Initially I was interested in medicine, and after college I took a job in a hospital. After three years in the hospital, I took a few courses in programming. I enjoyed it so much I quit my job six months later to pursue a full time education.</p>
+
+                            <p>Currently, I am pursuing an education in Computer Science and a degree as a Developer. The Computer Science portion is focused on algorithms, data structures, virtualization, etc. and the developer degree on coding habits, code reusability, and popular frameworks. I am happy with the switch from health care to a programmer role. I thoroughly enjoy the fact that I can create code to solve problems I have on a daily basis.</p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div>
+                            <!-- TODO image -->
+                            <h2 class="header">Work Experience</h2>
+                        </div>
+                        <div class="experience text">
+                            <h4>Non-IT</h4>
+                            <div class="content-item">
+                                <div class="row work-details">
+                                    <p class="work-item-header">Emergency Technician</p>
+                                    <p class="date">June 2017 - December 2017</p>
+                                </div>
+                                <p class="work-item-location">St Mary's Hospital - Emergency Department, Madison WI</p>
+                                <p>Description and responsibilities</p>
+                            </div>
+                            <div class="content-item">
+                                <div class="row work-details">
+                                    <p class="work-item-header">Registration Clerk</p>
+                                    <p class="date">June 2014 - June 2017</p>
+                                </div>
+                                <p class="work-item-location">St Mary's Hospital - Patient Registration, Madison WI</p>
+                                <p>Description and responsibilities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div>
+                            <!-- TODO image -->
+                            <h2 class="header">Projects</h2>
+                        </div>
+                        <div class="projects text">
+                            <div class="content-item">
+                                <p class="project-header"><a href="https://github.com/j-stoff/tictactoe" target="_blank">TicTacToe</a></p>
+                                <p>Description</p>
+                            </div>
+                            <div class="content-item">
+                                <p class="project-header"><a href="https://github.com/j-stoff/charge" target="_blank">Charge!</a></p>
+                                <p>Description</p>
+                            </div>
+                            <div class="content-item">
+                                <p class="project-header"><a href="https://github.com/j-stoff/my_next_book" target="_blank">Next Book</a></p>
+                                <p>Description</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div>
+                            <!-- TODO image -->
+                            <h2 class="header">Skills</h2>
+                        </div>
+                        <div class="skills text">
+                            <div class="row skill-item">
+                                <p class="skill-header col-lg-4">Java / Tomcat</p>
+                                <div class="col-lg-8">90-95</div>
+                            </div>
+                            <div class="row skill-item">
+                                <p class="skill-header col-lg-4">Javascript / jQuery</p>
+                                <div class="col-lg-8">90-95</div>
+                            </div>
+                            <div class="row skill-item">
+                                <p class="skill-header col-lg-4">RDBMS (MySQL/Oracle)</p>
+                                <p class="col-lg-8">90-95</p>
+                            </div>
+                            <div class="row skill-item">
+                                <p class="skill-header col-lg-4">Responsive Design / Bootstrap</p>
+                                <p class="col-lg-8">80-85</p>
+                            </div>
+                            <div class="row skill-item">
+                                <p class="skill-header col-lg-4">Git</p>
+                                <p class="col-lg-8">80-85</p>
+                            </div>
+                            <div class="row skill-item">
+                                <p class="skill-header col-lg-4">Python / Flask</p>
+                                <p class="col-lg-8">70</p>
+                            </div>
+                            <div class="row skill-item">
+                                <p class="skill-header col-lg-4">Mobile App Design (Xcode/Android Studio)</p>
+                                <p class="col-lg-8">65</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="content col-md-9">
-                <div class="section">
-                    <div>
-                        <!-- TODO image -->
-                        <h2 class="header">Education</h2>
-                    </div>
-                    <div class="profile text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at sapien vulputate, dignissim metus at, posuere purus. Proin porttitor orci nec tellus consectetur suscipit. Maecenas id ex erat. Fusce sagittis risus eu tellus condimentum placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus urna risus, interdum in urna suscipit, sollicitudin auctor mi. Sed vitae porttitor sem. Vivamus tortor justo, maximus sit amet quam nec, commodo ullamcorper ante. Phasellus vel nunc elit. Aenean egestas nec diam eu aliquet. Sed ut porttitor libero. Maecenas metus ligula, fermentum non blandit ut, egestas ac eros. Donec purus massa, tincidunt eu erat ac, efficitur faucibus neque.</p>
-                    </div>
-                </div>
-                <div class="section">
-                    <div>
-                        <!-- TODO image -->
-                        <h2 class="header">Work Experience</h2>
-                    </div>
-                    <div class="experience text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at sapien vulputate, dignissim metus at, posuere purus. Proin porttitor orci nec tellus consectetur suscipit. Maecenas id ex erat. Fusce sagittis risus eu tellus condimentum placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus urna risus, interdum in urna suscipit, sollicitudin auctor mi. Sed vitae porttitor sem. Vivamus tortor justo, maximus sit amet quam nec, commodo ullamcorper ante. Phasellus vel nunc elit. Aenean egestas nec diam eu aliquet. Sed ut porttitor libero. Maecenas metus ligula, fermentum non blandit ut, egestas ac eros. Donec purus massa, tincidunt eu erat ac, efficitur faucibus neque.</p>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <div>
-                        <!-- TODO image -->
-                        <h2 class="header">Projects</h2>
-                    </div>
-                    <div class="projects text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at sapien vulputate, dignissim metus at, posuere purus. Proin porttitor orci nec tellus consectetur suscipit. Maecenas id ex erat. Fusce sagittis risus eu tellus condimentum placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus urna risus, interdum in urna suscipit, sollicitudin auctor mi. Sed vitae porttitor sem. Vivamus tortor justo, maximus sit amet quam nec, commodo ullamcorper ante. Phasellus vel nunc elit. Aenean egestas nec diam eu aliquet. Sed ut porttitor libero. Maecenas metus ligula, fermentum non blandit ut, egestas ac eros. Donec purus massa, tincidunt eu erat ac, efficitur faucibus neque.</p>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <div>
-                        <!-- TODO image -->
-                        <h2 class="header">Skills</h2>
-                    </div>
-                    <div class="skills text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at sapien vulputate, dignissim metus at, posuere purus. Proin porttitor orci nec tellus consectetur suscipit. Maecenas id ex erat. Fusce sagittis risus eu tellus condimentum placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus urna risus, interdum in urna suscipit, sollicitudin auctor mi. Sed vitae porttitor sem. Vivamus tortor justo, maximus sit amet quam nec, commodo ullamcorper ante. Phasellus vel nunc elit. Aenean egestas nec diam eu aliquet. Sed ut porttitor libero. Maecenas metus ligula, fermentum non blandit ut, egestas ac eros. Donec purus massa, tincidunt eu erat ac, efficitur faucibus neque.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="footer">
             <p class="site-link"><a href="index.html">To website</a></p>
             <p class="acknowledgement">Based on Jekyll theme 'online-cv' which uses the designs from <a href="https://themes.3rdwavemedia.com/">Xiaoying Riley</a></p>
         </div>
-    </div>
 
 
 </body>
