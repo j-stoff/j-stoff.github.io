@@ -1,26 +1,85 @@
+html, body {
+    height: 100%;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+}
+
+body {
+    margin: 0;
+    background-color: #d8d8d8;
+    padding: 30px;
+}
+
 .page {
     height: 1100px;
-    margin-top: 30px;
 }
 
 .content {
-    background-color: blue;
+    background-color: #f7fffe;
     height: 100%;
+    padding: 60px;
+    padding-right: 150px;
 }
 
 .sidebar {
-    background-color: red;
+    background-color: #7bc2d3;
     height: 100%;
     float: none;
 }
 
 .profile-pic {
-    background-color: yellow;
+    background-color: #42A8C0;
     height: 300px;
+    padding: 30px;
+    text-align: center;
 }
 
-@media screen and (min-width: 760px) {
+.profile-name {
+    color: white;
+}
+
+.profile-job {
+    color: #d8d8d8;
+}
+
+.profile-info {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+.picture {
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.item {
+    margin-bottom: 15px;
+}
+
+.header {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+@media screen and (min-width: 990px) {
     .sidebar {
         float: right;
     }
+}
+
+.full {
+    max-width: 960px;
 }
