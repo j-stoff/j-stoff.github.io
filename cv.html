@@ -11,6 +11,8 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style/coverletter.css">
 </head>
 <body>
@@ -19,26 +21,41 @@
                 <div class="sidebar">
                     <div class="profile-pic">
                         <div class="picture"></div>
-                        <h3 class="profile-name">Jacob Stoffregen</h3>
-                        <h5 class="profile-job">Application Developer</h5>
+                        <h1 class="profile-name">Jacob Stoffregen</h3>
+                        <h3 class="profile-job">Application Developer</h5>
                     </div>
                     <div class="profile-info">
                         <!-- TODO add icons -->
-                        <div class="personal-info sidebar-item">
-                            <p class="item">#jacob.stoffregen@gmail.com</p>
-                            <p class="item">920-475-5261</p>
-                            <p class="item">github.com/j-stoff</p>
-                            <p class="item">j-stoff.github.io/</p>
+                        <div class="sidebar-item">
+                            <ul class="personal-info">
+                                <li>
+                                    <p class="item"><i class="icon-envelope sidebar-icon"></i>jacob.stoffregen@gmail.com</p>
+                                </li>
+                                <li>
+                                    
+                                    <p class="item"><i class="icon-phone sidebar-icon"></i>920-475-5261</p>
+                                </li>
+                                <li>
+                                    <p class="item"><i class="icon-github sidebar-icon"></i>github.com/j-stoff</p>
+                                </li>
+                                <li>
+                                    <p class="item"><i class="icon-home sidebar-icon"></i><a class="sidebar-link" href="index.html" target="_blank">j-stoff.github.io/</a></p>
+                                </li>
+                            </ul>
+                            
+                            
+                            
+                            
                         </div>
                         <div class="education sidebar-item">
                             <h4>EDUCATION</h4>
-                            <p class="item">BS in Neurobiology</p>
+                            <p class="item-title">BS in Neurobiology</p>
                             <p class="details">University of Wisconsin Madison</p>
                             <p class="details">2010 - 2014</p>
-                            <p class="item">Associates - Mobile Application Programmer</p>
+                            <p class="item-title">Associates - Mobile Application Programmer</p>
                             <p class="details">Madison Area Technical College</p>
                             <p class="details">2016 - Current</p>
-                            <p class="item">Computer Science Certificate</p>
+                            <p class="item-title">Computer Science Certificate</p>
                             <p class="details">University of Wisconsin Madison</p>
                             <p class="details">2017 - Current</p>
                         </div>
@@ -47,8 +64,7 @@
                 <div class="content">
                     <div class="section">
                         <div>
-                            <!-- TODO image -->
-                            <h2 class="header">Career</h2>
+                            <h2 class="header"><i class="icon-user content-icon"></i>Career</h2>
                         </div>
                         <div class="profile text">
                             <p>Initially I was interested in medicine, and after college I took a job in a hospital. After three years in the hospital, I took a few courses in programming. I enjoyed it so much I quit my job six months later to pursue a full time education.</p>
@@ -59,7 +75,7 @@
                     <div class="section">
                         <div>
                             <!-- TODO image -->
-                            <h2 class="header">Work Experience</h2>
+                            <h2 class="header"><i class="icon-cog content-icon"></i>Work Experience</h2>
                         </div>
                         <div class="experience text">
                             <h4>Non-IT</h4>
@@ -85,7 +101,7 @@
                     <div class="section">
                         <div>
                             <!-- TODO image -->
-                            <h2 class="header">Projects</h2>
+                            <h2 class="header"><i class="icon-lightbulb content-icon"></i>Projects</h2>
                         </div>
                         <div class="projects text">
                             <div class="content-item">
@@ -106,36 +122,50 @@
                     <div class="section">
                         <div>
                             <!-- TODO image -->
-                            <h2 class="header">Skills</h2>
+                            <h2 class="header"><i class="icon-code content-icon"></i>Skills</h2>
                         </div>
                         <div class="skills text">
                             <div class="row skill-item">
                                 <p class="skill-header col-lg-4">Java / Tomcat</p>
-                                <div class="col-lg-8">90-95</div>
+                                <div class="exp-bar col-lg-8">
+                                <div class="exp-filler exp-95"></div>
+                                </div>
                             </div>
                             <div class="row skill-item">
                                 <p class="skill-header col-lg-4">Javascript / jQuery</p>
-                                <div class="col-lg-8">90-95</div>
+                                <div class="exp-bar col-lg-8">
+                                    <div class="exp-filler exp-95"></div>
+                                </div>
                             </div>
                             <div class="row skill-item">
                                 <p class="skill-header col-lg-4">RDBMS (MySQL/Oracle)</p>
-                                <p class="col-lg-8">90-95</p>
+                                <div class="exp-bar col-lg-8">
+                                    <div class="exp-filler exp-95"></div>
+                                </div>
                             </div>
                             <div class="row skill-item">
                                 <p class="skill-header col-lg-4">Responsive Design / Bootstrap</p>
-                                <p class="col-lg-8">80-85</p>
+                                <div class="exp-bar col-lg-8">
+                                    <div class="exp-filler exp-90"></div>
+                                </div>
                             </div>
                             <div class="row skill-item">
                                 <p class="skill-header col-lg-4">Git</p>
-                                <p class="col-lg-8">80-85</p>
+                                <div class="exp-bar col-lg-8">
+                                    <div class="exp-filler exp-85"></div>
+                                </div>
                             </div>
                             <div class="row skill-item">
-                                <p class="skill-header col-lg-4">Python / Flask</p>
-                                <p class="col-lg-8">70</p>
+                                <p class="skill-header col-lg-4">Python / Flask / Django</p>
+                                <div class="exp-bar col-lg-8">
+                                    <div class="exp-filler exp-75"></div>
+                                </div>
                             </div>
                             <div class="row skill-item">
                                 <p class="skill-header col-lg-4">Mobile App Design (Xcode/Android Studio)</p>
-                                <p class="col-lg-8">65</p>
+                                <div class="exp-bar col-lg-8">
+                                    <div class="exp-filler exp-75"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
