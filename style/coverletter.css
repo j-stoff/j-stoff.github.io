@@ -216,6 +216,14 @@ i {
     color: #545E6C;
 }
 
+.footer {
+    margin-top: 50px;
+}
+
+.acknowledgement {
+    text-align: center;
+}
+
 @media screen and (min-width: 990px) {
     .sidebar {
         float: right;
